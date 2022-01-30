@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apresaentação</title>
+    <link rel="stylesheet" type="text/css" href="styles.css"> 
+    <nav class="NomeNav">
+        <h1>
+        Leonardo Marques Pacheco
+    </h1>
+    </nav>
+    <nav><div class="Left">
+        <h1>Tópicos no Currículo</h1>
+        <div class="btn">
+        <button type="button" class="btn1" onclick="Curriculo()">Apresaentação</button>
+        
+        <button type="button" class="btn2" onclick="Formacao()">Formação</button>
+
+        <button type="button" class="btn3" onclick="Cursos()">Cursos</button>
+
+        <button type="button" class="btn3" onclick="Experiencia()">Experiência profissional</button>
+    </div>
+    </div>
+</head>
+
+<body>
+<div id="PageContainer">
+
+
+    <div class="Main">
+        <h3 id="saida"></h3>
+    
+
+    </div>
+
+
+</div>
+
+<div class="Footer">
+    
+
+</div>
+    <script>
+let ExperienciaProfissional = {
+    Exp: function (){
+        return (
+            main.innerHTML = Rcpn.Experiencia1()+"<br>"+"<br>"+"<br>"+Kontik.Experiencia2() 
+            +"<br>"+"<br>"+"<br>"+Tesis.Experiencia3()+"<br>"+"<br>"+"<br>"+Avipam.Experiencia4()
+            +"<br>"+"<br>"+"<br>"+Flytour.Experiencia5()
+        )
+    }
+}
+        let Rcpn = {
+            empresa:"Empresa: RCPN DO 1º DISTRITO DE SÃO GONÇALO RJ",
+            cargo:"Cargo: Escrevente / Aux. De TI.",
+            periodo:"Período: 10/2020 até 09/2021",
+            atribuicoes:"(Realizava e autentficava a emissão de certidões.)",
+            Experiencia1: function(){
+                return main.innerHTML = this.empresa+"<br>"+this.cargo+"<br>"+ this.periodo+"<br>"+ this.atribuicoes
+            }
+           
+        }
+
+        let Kontik = {
+            empresa:"Empresa: KONTIK FRANSTUR",
+            cargo:"Cargo: Consultor de viagens",
+            periodo:"Período: 02/2020 a 08/2020",
+            atribuicoes:"(Realizava cotação, reservas de voos, carros e emissão de passagem aérea.)",
+            Experiencia2: function(){
+                return main.innerHTML = this.empresa+"<br>"+this.cargo+"<br>"+ this.periodo+"<br>"+ this.atribuicoes
+            }
+        }
+
+        let Tesis = {
+            empresa:"TESIS TECNOLOGIA",
+            cargo:"Cargo: Assistente administrativo",
+            periodo:"Período: 03/2015 a 07/2019",
+            atribuicoes:"(Era responsável pela revisão dos cálculos de reembolso de passagens aéreas internacionais.Realizava o atendimento e suporte aos clientes.)",
+            Experiencia3: function(){
+                return main.innerHTML = this.empresa+"<br>"+this.cargo+"<br>"+ this.periodo+"<br>"+ this.atribuicoes
+            }
+        }
+    
+        let Avipam = {
+            empresa:"AVIPAM TURISMO E TECNOLOGIA",
+            cargo:"Cargo: Consultor PL1 N1",
+            periodo:"Período:07/2014 a 12/14",
+            atribuicoes:"(Realizava cotação, reservas de voos, carros e emissão de passagem aérea.)",
+            Experiencia4: function(){
+                return main.innerHTML = this.empresa+"<br>"+this.cargo+"<br>"+ this.periodo+"<br>"+ this.atribuicoes
+            }
+        }
+
+        let Flytour = {
+            empresa:"FLYTOUR AMERICAN EXPRESS",
+            cargo:"Cargo: Consultor de viagens Jr.",
+            periodo:"Período: 07/2011 a 07/2014",
+            atribuicoes:"(Realizava cotação, reservas de voos, carros e emissão de passagem aérea.)",
+            Experiencia5: function(){
+                return main.innerHTML = this.empresa+"<br>"+this.cargo+"<br>"+ this.periodo+"<br>"+ this.atribuicoes
+            }
+        }
+
+    let main = document.getElementById("saida")
+    let nasc = "Nascido em 09/11/1989 - 32 anos - Solteiro"
+    let end = "Endereço: Rua Maria Nazaret nº 154 - Centro - São Gonçalo - Rj"
+    let contato = "Contato (21) 9 8638-0086"
+    let email1 = "E-mail:Pacheco.LeonardoMarques@gmail.com"
+    let email2 = "Leonardo.M.Pacheco@hotmail.com"
+    
+    let ensino = "Ensino superior na universidade Cândido Mendes"
+    let cursando = "Cursando - Análise e desenvolvimento de sistemas (4ºPeríodo)"
+
+    let cursos1 = "Frontend (HTML, CSS, JavaScript, jQuery)"
+    let cursos2 = "Backend (PHP, Java)"
+    let cursos3 = "Outros (web design, Word, Excel, Power Point, Internet)"
+
+
+function Curriculo(){
+
+    main.innerHTML = `${nasc} <br> ${end} <br> ${contato} <br> ${email1}<br> ${email2}`
+}
+
+function Formacao(){
+
+main.innerHTML = `${ensino} <br> ${cursando}`
+}
+
+function Cursos(){
+
+main.innerHTML = `${cursos1} <br> ${cursos2} <br> ${cursos3}`
+}
+
+function Experiencia(){
+ExperienciaProfissional.Exp()
+
+}
+
+
+    </script>
+</body>
+
+</html>
