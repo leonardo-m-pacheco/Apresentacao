@@ -16,13 +16,15 @@
         <div class="Left">
         <h1>Tópicos no Currículo</h1>
         <div class="btn">
-        <button type="button" class="btn1" onclick="Curriculo()">Apresaentação</button>
+        <button type="button" class="btn1" onclick="Curriculo()">Informações</button>
         
         <button type="button" class="btn2" onclick="Formacao()">Formação</button>
 
-        <button type="button" class="btn3" onclick="Cursos()">Cursos</button>
+        <button type="button" class="btn3" onclick="Cursos()">Linguagens</button>
 
-        <button type="button" class="btn3" onclick="Experiencia()">Experiência profissional</button>
+        <button type="button" class="btn4" onclick="Experiencia()">Experiência profissional</button>
+
+        <button type="button" class="btn5" onclick="Linguagem()">Lingua Estrangeira</button>
     </div>
     </div>
 </head>
@@ -32,20 +34,14 @@
 
 
     <div class="Main">
+   
         <h3 id="saida"></h3>
     
-
     </div>
-
-
-</div>
-
-<div class="Footer">
-    
 
 </div>
     <script>
-let ExperienciaProfissional = {
+    let ExperienciaProfissional = {
     Exp: function (){
         return (
             main.innerHTML = Rcpn.Experiencia1()+"<br>"+"<br>"+"<br>"+Kontik.Experiencia2() 
@@ -105,42 +101,76 @@ let ExperienciaProfissional = {
             }
         }
 
-    let main = document.getElementById("saida")
-    let nasc = "Nascido em 09/11/1989 - 32 anos - Solteiro"
-    let end = "Endereço: Rua Maria Nazaret nº 154 - Centro - São Gonçalo - Rj"
-    let contato = "Contato (21) 9 8638-0086"
-    let email1 = "E-mail:Pacheco.LeonardoMarques@gmail.com"
-    let email2 = "Leonardo.M.Pacheco@hotmail.com"
+    let Informacoes = {
+        nasc:"Nascido em 09/11/1989",
+        idade:"Idade: 32 anos",
+        end:"Endereço: Rua Maria Nazaret nº 154 - Centro - São Gonçalo - Rj",
+        contato:"Contato (21) 9 8638-0086",
+        email1:"E-mail:Pacheco.LeonardoMarques@gmail.com",
+        email2:"Leonardo.M.Pacheco@hotmail.com",
+        info: function (){
+            
+            return (
+            main.innerHTML = this.nasc+"<br>"+"<br>"+this.idade+"<br>"+"<br>"+this.end+"<br>"+"<br>"+this.contato+"<br>"+"<br>"+this.email1+"<br>"+"<br>"+this.email2
+            )
+        }
+    }
     
-    let ensino = "Ensino superior na universidade Cândido Mendes"
-    let cursando = "Cursando - Análise e desenvolvimento de sistemas (4ºPeríodo)"
+    let Formacoes = {
+        ensino:"Ensino superior na universidade Cândido Mendes",
+        cursando:"Cursando - Análise e desenvolvimento de sistemas (4ºPeríodo)",
+        FormacaoInfo: function (){
+            return main.innerHTML = this.ensino+"<br>"+"<br>"+this.cursando
+        }
+    }
 
-    let cursos1 = "Frontend (HTML, CSS, JavaScript, jQuery)"
-    let cursos2 = "Backend (PHP, Java)"
-    let cursos3 = "Outros (web design, Word, Excel, Power Point, Internet)"
+    let MeusCursos = {
+        cursos1:"Frontend: (HTML, CSS, JavaScript, React.js, jQuery)",
+        cursos2:"Backend: (PHP, mySQL)",
+        cursos:function(){
+            return (
+                main.innerHTML = this.cursos1+"<br>"+"<br>"+this.cursos2
+            )
+        }
+    }
+
+    let Linguas = {
+        ingles:"Inglês: Fluente",
+        Espanhol:"Espanhol: Fluente",
+        LinguasInfo: function(){
+            return(
+                main.innerHTML = this.ingles+"<br>"+"<br>"+this.Espanhol
+            )
+        }
+    }
+
+   
 
 
 function Curriculo(){
 
-    main.innerHTML = `${nasc} <br> ${end} <br> ${contato} <br> ${email1}<br> ${email2}`
+    Informacoes.info()
 }
 
 function Formacao(){
 
-main.innerHTML = `${ensino} <br> ${cursando}`
+Formacoes.FormacaoInfo()
 }
 
 function Cursos(){
 
-main.innerHTML = `${cursos1} <br> ${cursos2} <br> ${cursos3}`
+MeusCursos.cursos()
 }
 
 function Experiencia(){
 ExperienciaProfissional.Exp()
-
 }
 
+function Linguagem(){
+    Linguas.LinguasInfo()
+}
 
+let main = document.getElementById("saida")
     </script>
 </body>
 
