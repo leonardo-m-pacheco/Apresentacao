@@ -5,8 +5,9 @@
     padding: 20px;
     text-align: left;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    background-color: wheat;
+    background-color: #f5deb3;
     float: inline-start;
+    background: linear-gradient(90deg, rgb(30, 180, 135) 24%, #fff 100%);
 }
 .Navbar{
     display: inline-block;
@@ -63,7 +64,52 @@ button{
   #saida{
       padding: 20px;
       
-  }
+        
+        
+        padding: 10%;
+        
+            -webkit-animation-name: saida;
+            animation-name: saida;
+            -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+            }
+            @-webkit-keyframes saida {
+            0% {
+            opacity: 0;
+            -webkit-transform: scale3d(.1, .1, .1) translate3d(0, 1000px, 0);
+            transform: scale3d(.1, .1, .1) translate3d(0, 1000px, 0);
+            -webkit-animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+            animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+            }
+            60% {
+            opacity: 1;
+            -webkit-transform: scale3d(.475, .475, .475) translate3d(0, -60px, 0);
+            transform: scale3d(.475, .475, .475) translate3d(0, -60px, 0);
+            -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+            animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+            }
+            }
+            @keyframes saida {
+            0% {
+            opacity: 0;
+            -webkit-transform: scale3d(.1, .1, .1) translate3d(0, 1000px, 0);
+            transform: scale3d(.1, .1, .1) translate3d(0, 1000px, 0);
+            -webkit-animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+            animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+            }
+            60% {
+            opacity: 1;
+            -webkit-transform: scale3d(.475, .475, .475) translate3d(0, -60px, 0);
+            transform: scale3d(.475, .475, .475) translate3d(0, -60px, 0);
+            -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+            animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+            }
+            } 
+          
+
+    
 
   h3{
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;

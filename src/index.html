@@ -62,7 +62,8 @@
             periodo:"Período: 10/2020 até 09/2021",
             atribuicoes:"(Realizava e autentficava a emissão de certidões.)",
             Experiencia1: function(){
-                return main.innerHTML = this.empresa+"<br>"+this.cargo+"<br>"+ this.periodo+"<br>"+ this.atribuicoes
+               
+                return main.innerHTML = this.empresa+"<br>"+this.cargo+"<br>"+ this.periodo+"<br>"+ this.atribuicoes 
             }
            
         }
@@ -103,7 +104,7 @@
             periodo:"Período: 07/2011 a 07/2014",
             atribuicoes:"(Realizava cotação, reservas de voos, carros e emissão de passagem aérea.)",
             Experiencia5: function(){
-                return main.innerHTML = this.empresa+"<br>"+this.cargo+"<br>"+ this.periodo+"<br>"+ this.atribuicoes
+                return main.innerHTML = this.empresa+"<br>"+this.cargo+"<br>"+ this.periodo+"<br>"+ this.atribuicoes 
             }
         }
 
@@ -147,7 +148,7 @@
             return(
                 main.innerHTML = this.ingles+"<br>"+"<br>"+this.Espanhol
             )
-        }
+        },
     }
 
 
@@ -157,13 +158,14 @@
 
 
 function Curriculo(){
-
+   
     Informacoes.info()
 }
 
 function Formacao(){
-
+    
 Formacoes.FormacaoInfo()
+
 }
 
 function Cursos(){
@@ -176,10 +178,15 @@ ExperienciaProfissional.Exp()
 }
 
 function Linguagem(){
-    Linguas.LinguasInfo()
+   Linguas.LinguasInfo()
+    
+    
+    
 }
 
 let main = document.getElementById("saida")
+
+
     </script>
 </body>
 
