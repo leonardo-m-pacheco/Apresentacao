@@ -462,24 +462,24 @@ var MaxPoints = {
 
         function tecla() {
             var x = event.key
-            if (x == "a") {
+            if (x == "a" || x == "A") {
 
                 bloco.x -= 30
             }
-            if (x == "d") {
+            if (x == "d" || x == "D") {
 
                 bloco.x += 30;
             }
 
-            if (x == "w") {
+            if (x == "w" || x== "W") {
                 bloco.y -= 35;
                 
             }
-            if (x == "s") {
+            if (x == "s" || x =="S") {
                 bloco.y += 35;
                 
             }
-            if (x == "p") {
+            if (x == "p"|| x == "P") {
                 alert(">>>Pause<<<\nPara voltar aperte 'OK'.")
 
             }
