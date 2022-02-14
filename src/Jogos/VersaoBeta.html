@@ -5,39 +5,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        canvas {
-            position: absolute;
-            top: 0px;
-            bottom: 0px;
-            left: 0px;
-            right: 0px;
-            margin: auto;
-            color: #1d1a03;
-            
-
-            /*color:#5476e7*/
-        }
-
-    </style>
+    <title>Shooting Asteroids</title>
+    <link rel="stylesheet" href="VersaoBeta.css">
 </head>
 
 <body>
 
     <!--
-        CAMPO DE COMENTÁRIOS DO PROJETO
-
-        Falta fazer: 
-        Contador de pontos
-        colisão entre a nave inimiga e o bloco
-
-
-        (bloco.x > inimigo.x + inimigo.largura &&
-                    bloco.x + bloco.largura > inimigo.x &&
-                    bloco.y < inimigo.y + inimigo.altura &&
-                    bloco.y + bloco.altura > inimigo.y) {
-        
+        Obrigado por jogar! Caso queira me ajudar a simplificar estes códigos
+        entre em contato comigo atravé do e-mail 
+        PACHECO.LEONARDOMARQUES@GMAIL.COM
     -->
 
 
@@ -57,7 +34,7 @@ var MaxPoints = {
                 ctx.fillText(record, 850, 550)
                 ctx.fillText("Record:", this.x, this.y)
                 ctx.font = '35px arial'
-                // ctx.fillRect(this.x, this.y, this.largura, this.altura)
+                
 
             },
             atualiza: function () {
@@ -81,7 +58,6 @@ var MaxPoints = {
                 ctx.fillText(vida, 510, 550)
                 ctx.fillText("Vidas:", this.x, this.y)
                 ctx.font = '35px arial'
-                // ctx.fillRect(this.x, this.y, this.largura, this.altura)
 
             },
             atualiza: function () {
@@ -102,8 +78,7 @@ var MaxPoints = {
                 ctx.fillText(contador, 110, 550)
                 ctx.fillText("Pts:", this.x, this.y)
                 ctx.font = '35px arial'
-                // ctx.fillRect(this.x, this.y, this.largura, this.altura)
-
+            
             },
             atualiza: function () {
                 contador
@@ -160,13 +135,11 @@ var MaxPoints = {
             cor: "#e6d4d8",
             desenha: function () {
 
-                ctx.beginPath(); // substitui completamente o fillRect. faz um circulo ao invés de retângulo
+                ctx.beginPath(); 
                 ctx.arc(this.x, this.y, 5, 5, 5 * Math.PI);
                 ctx.fillStyle = this.cor
                 ctx.fill()
 
-
-                // ctx.fillRect(this.x, this.y, this.largura, this.altura)
 
             },
             atualiza: function () {
@@ -214,9 +187,7 @@ var MaxPoints = {
             asteroid.src = "asteroid.png";
             ctx.drawImage(asteroid, this.x, this.y, 100, 60);
                 
-                //ctx.fillStyle = this.cor;
-                //ctx.fillRect(this.x, this.y, this.largura, this.altura)
-
+              
             },
             atualiza: function () {
                 this.velocidade += this.gravidade;
@@ -318,10 +289,7 @@ var MaxPoints = {
                 var asteroid = new Image()
             asteroid.src = "asteroid.png";
             ctx.drawImage(asteroid, this.x, this.y, 100, 60);
-                
-                //ctx.fillStyle = this.cor;
-                //ctx.fillRect(this.x, this.y, this.largura, this.altura)
-
+  
             },
             atualiza: function () {
                 this.velocidade += this.gravidade;
@@ -504,10 +472,6 @@ var MaxPoints = {
             var img = new Image()
             img.src = "space-photo.png"
             ctx.drawImage(img, 0, 0, 1000, 600);
-
-            //ctx.fillStyle = "black";
-            //ctx.fillRect(0, 0, LARGURA, ALTURA)
-            
 
             chao.desenha()
             bloco.desenha()
