@@ -407,6 +407,11 @@ function roda() {
     window.requestAnimationFrame(roda)
 }
 
+function Controles(){
+return alert("'D' = Dir\n'A' = Esq\n'W' = Cima\n'S' = Baixo\n'P' = Pause");
+
+}
+
 function tecla() {
     var x = event.key
     if (x == "a" || x == "A") {
