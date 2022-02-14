@@ -1,6 +1,6 @@
 
 
-var canvas, ctx, ALTURA, LARGURA, frames = 0, contador =0, vida =3, record = 0
+var canvas, ctx, ALTURA, LARGURA, frames = 0, contador = 0, vida = 3, record = 0
 
 var MaxPoints = {
     x: 700,
@@ -13,16 +13,16 @@ var MaxPoints = {
         ctx.fillText(record, 850, 550)
         ctx.fillText("Record:", this.x, this.y)
         ctx.font = '35px arial'
-        
+
 
     },
     atualiza: function () {
-        
-       if(contador > record){
 
-        record++
-       }
-        
+        if (contador > record) {
+
+            record++
+        }
+
     }
 }
 var VidaJogador = {
@@ -40,7 +40,7 @@ var VidaJogador = {
 
     },
     atualiza: function () {
-       vida
+        vida
 
     }
 }
@@ -57,7 +57,7 @@ var placar = {
         ctx.fillText(contador, 110, 550)
         ctx.fillText("Pts:", this.x, this.y)
         ctx.font = '35px arial'
-    
+
     },
     atualiza: function () {
         contador
@@ -75,10 +75,10 @@ var bloco = {
     forcadopulo: 25,
     quique: 0,
     desenha: function () {
-    var naveheroi = new Image()
-    naveheroi.src = "nave-heroi.png";
-    ctx.drawImage(naveheroi, this.x, this.y, 100, 60);
-       
+        var naveheroi = new Image()
+        naveheroi.src = "nave-heroi.png";
+        ctx.drawImage(naveheroi, this.x, this.y, 100, 60);
+
         // ctx.fillStyle = this.cor;
         //ctx.fillRect(this.x, this.y, this.largura, this.altura)
     },
@@ -110,11 +110,11 @@ var bala = {
     altura: 5,
     forca: 15,
     gravidade: 0.01,
-    velocidade: 20,
+    velocidade: 25,
     cor: "#e6d4d8",
     desenha: function () {
 
-        ctx.beginPath(); 
+        ctx.beginPath();
         ctx.arc(this.x, this.y, 5, 5, 5 * Math.PI);
         ctx.fillStyle = this.cor
         ctx.fill()
@@ -133,7 +133,7 @@ var bala = {
             this.x = 30;
             this.velocidade = 20
             this.y = bloco.y + bloco.altura - 5
-            this.x = bloco.x + bloco.largura +30
+            this.x = bloco.x + bloco.largura + 30
         }
 
 
@@ -153,7 +153,7 @@ var chao = {
 }
 
 
- var inimigo = {
+var inimigo = {
     x: 1000,
     y: 190,
     largura: 50,
@@ -163,10 +163,10 @@ var chao = {
     velocidade: 0,
     desenha: function () {
         var asteroid = new Image()
-    asteroid.src = "asteroid.png";
-    ctx.drawImage(asteroid, this.x, this.y, 100, 60);
-        
-      
+        asteroid.src = "asteroid.png";
+        ctx.drawImage(asteroid, this.x, this.y, 100, 60);
+
+
     },
     atualiza: function () {
         this.velocidade += this.gravidade;
@@ -178,18 +178,18 @@ var chao = {
             this.y = Math.floor(Math.random() * (450 - 1) + 1)
             this.velocidade = 0;
             vida--
-            if(vida == 0){
-               
-               if(confirm("Game Over! \n\n Record: "+record+" \n\n Aperte 'OK' para jogar mais!")){
-                roda()
-                var txt;  
-                inimigo2.x = 1000;
-                  contador = 0;
-                  vida = 3;
-                  
-               }else{
-                   txt = alert("Pressione 'F5' para continuar!")
-               }
+            if (vida == 0) {
+
+                if (confirm("Game Over! \n\n Record: " + record + " \n\n Aperte 'OK' para jogar mais!")) {
+                    roda()
+                    var txt;
+                    inimigo2.x = 1000;
+                    contador = 0;
+                    vida = 3;
+
+                } else {
+                    txt = alert("Pressione 'F5' para continuar!")
+                }
                 stop.requestAnimationFrame(roda)
             }
             contador -= 2;
@@ -209,7 +209,7 @@ var chao = {
             contador++
             this.velocidade += 1;
         }
-       
+
         if (this.velocidade >= 6) {
             this.velocidade--;
         }
@@ -220,33 +220,33 @@ var chao = {
             inimigo.x + inimigo.largura > bloco.x &&
             inimigo.y < bloco.y + bloco.altura &&
             inimigo.y + inimigo.altura > bloco.y) {
-                vida--
-               
+            vida--
+
             this.y = Math.floor(Math.random() * (450 - 1) + 1)
             this.x = 1020;
             this.velocidade = 0;
             bloco.y = 0;
             bloco.x = -100;
             contador -= 4;
-           
+
             if (contador < 0) {
                 contador = 0;
             }
-            if(vida == 0){
-               
-               if(confirm("Game Over! \n\n Record: "+record+" \n\n Aperte 'OK' para jogar mais!")){
-                roda()
-                var txt;
-                inimigo2.x = 1000;
-                  contador = 0;
-                  vida = 3;
-                  
-               }else{
-                   txt = alert("Pressione 'F5' para continuar!")
-               }
+            if (vida == 0) {
+
+                if (confirm("Game Over! \n\n Record: " + record + " \n\n Aperte 'OK' para jogar mais!")) {
+                    roda()
+                    var txt;
+                    inimigo2.x = 1000;
+                    contador = 0;
+                    vida = 3;
+
+                } else {
+                    txt = alert("Pressione 'F5' para continuar!")
+                }
                 stop.requestAnimationFrame(roda)
             }
-          
+
         }
 
 
@@ -266,8 +266,8 @@ var inimigo2 = {
     velocidade: 0,
     desenha: function () {
         var asteroid = new Image()
-    asteroid.src = "asteroid.png";
-    ctx.drawImage(asteroid, this.x, this.y, 100, 60);
+        asteroid.src = "asteroid.png";
+        ctx.drawImage(asteroid, this.x, this.y, 100, 60);
 
     },
     atualiza: function () {
@@ -280,18 +280,18 @@ var inimigo2 = {
             this.y = Math.floor(Math.random() * (450 - 1) + 1)
             this.velocidade = 0;
             vida--
-            if(vida == 0){
-               
-               if(confirm("Game Over! \n\n Record: "+record+" \n\n Aperte 'OK' para jogar mais!")){
-                roda()
-                var txt;  
-                inimigo.x = 1000;
-                  contador = 0;
-                  vida = 3;
-                  
-               }else{
-                   txt = alert("Pressione 'F5' para continuar!")
-               }
+            if (vida == 0) {
+
+                if (confirm("Game Over! \n\n Record: " + record + " \n\n Aperte 'OK' para jogar mais!")) {
+                    roda()
+                    var txt;
+                    inimigo.x = 1000;
+                    contador = 0;
+                    vida = 3;
+
+                } else {
+                    txt = alert("Pressione 'F5' para continuar!")
+                }
                 stop.requestAnimationFrame(roda)
             }
             contador -= 2;
@@ -311,7 +311,7 @@ var inimigo2 = {
             contador++
             this.velocidade += 1;
         }
-       
+
         if (this.velocidade >= 6) {
             this.velocidade--;
         }
@@ -322,33 +322,33 @@ var inimigo2 = {
             inimigo2.x + inimigo2.largura > bloco.x &&
             inimigo2.y < bloco.y + bloco.altura &&
             inimigo2.y + inimigo2.altura > bloco.y) {
-                vida--
-               
+            vida--
+
             this.y = Math.floor(Math.random() * (450 - 1) + 1)
             this.x = 1020;
             this.velocidade = 0;
             bloco.y = 0;
             bloco.x = -100;
             contador -= 4;
-           
+
             if (contador < 0) {
                 contador = 0;
             }
-            if(vida == 0){
-               
-               if(confirm("Game Over! \n\n Record: "+record+" \n\n Aperte 'OK' para jogar mais!")){
-                roda()
-                   var txt;
-                   inimigo.x = 1000;
-                  contador = 0;
-                  vida = 3;
-                 
-               }else{
-                   txt = alert("Pressione 'F5' para continuar!")
-               }
+            if (vida == 0) {
+
+                if (confirm("Game Over! \n\n Record: " + record + " \n\n Aperte 'OK' para jogar mais!")) {
+                    roda()
+                    var txt;
+                    inimigo.x = 1000;
+                    contador = 0;
+                    vida = 3;
+
+                } else {
+                    txt = alert("Pressione 'F5' para continuar!")
+                }
                 stop.requestAnimationFrame(roda)
             }
-          
+
         }
 
 
@@ -391,7 +391,7 @@ function main() {
 
     document.body.appendChild(canvas);
     document.addEventListener("keydown", tecla);
-    
+
 
 
 
@@ -418,15 +418,15 @@ function tecla() {
         bloco.x += 30;
     }
 
-    if (x == "w" || x== "W") {
+    if (x == "w" || x == "W") {
         bloco.y -= 35;
-        
+
     }
-    if (x == "s" || x =="S") {
+    if (x == "s" || x == "S") {
         bloco.y += 35;
-        
+
     }
-    if (x == "p"|| x == "P") {
+    if (x == "p" || x == "P") {
         alert(">>>Pause<<<\nPara voltar aperte 'OK'.")
 
     }
