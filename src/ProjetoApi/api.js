@@ -31,7 +31,7 @@
                 tela.innerHTML = text
             )
         }//o loop for percorre todo o array. uma excelente forma para exibir os elementos.
-        
+        /*
         let tik = document.getElementById("Tik")
         let texto = '{"Funcionarios": ['+
         '{"PrimeiroNome":"Leonardo","SobreNome":"Pacheco"},'+
@@ -39,3 +39,5 @@
         '{"PrimeiroNome":"Ragnar","SobreNome":"Pacheco"}]}'
         const obj = JSON.parse(texto);
         tik.innerHTML = obj.Funcionarios[0].PrimeiroNome + " " + obj.Funcionarios[0].SobreNome;
+*/
+
