@@ -22,44 +22,13 @@
         </div>
 
         <div id="resultado">
-
+            
         </div>
-        <button type="button" onclick="Calcular()">Calcular</button>
+        <button type="button"  onclick="Calcular()">Calcular</button>
 
     </div>
 
-    <script>
-
-
-            const resultado = document.getElementById('resultado')
-            let peso = document.getElementById('peso')
-            let altura = document.getElementById('altura')
-            
-        Calcular = () => {
-            let weight = Number(peso.value)
-            let height = Number(altura.value)
-            let result = (weight/ height ** 2).toFixed(2)
-
-            if (result < 18.00) {
-                resultado.innerHTML = `${result} <br> Magreza`;
-            }
-             if(result > 18.00 || result < 24.99){
-                resultado.innerHTML = `${result} <br> Normal`;
-            }
-             if(result > 25.00 || result < 29.99){
-                resultado.innerHTML = `${result} <br> Sobrepeso`;
-            }
-             if(result > 30.00|| result < 39.99){
-                resultado.innerHTML =`${result} <br> Obesidade`;
-            }
-            if(result > 40.00 ){
-                resultado.innerHTML =`${result} <br> Obesidade Grave`;
-            }
-        
-           
-            
-        }
-    </script>
+    <script src="imc.js"></script>
 </body>
 
 </html>
