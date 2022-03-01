@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Placar</title>
+    <link rel='stylesheet' type="text/css" href="Placar.css" media="screen">
+</head>
+<body>
+
+    <div id="container">
+
+        <div class="jogador1">
+            <input type="text" placeholder="Nome do jogador">
+            <div id="placar1">0</div>
+
+            <button type="button" onclick="AumentaJ1()">+1 Ponto</button>
+            <button type="button" onclick="DiminuiJ1()">-1 Ponto</button>
+            <button type="button" onclick="ZeraJ1()">Zera</button>
+        </div>
+
+        <div class="middle">
+            X
+            <br>
+            <img src="https://cdn-icons-png.flaticon.com/512/20/20592.png" alt="refrash">
+        </div>
+
+        <div class="jogador2">
+            <input type="text" placeholder="Nome do jogador">
+            <div id="placar2">0</div>
+
+            <button type="button" onclick="AumentaJ2()">+1 Ponto</button>
+            <button type="button" onclick="DiminuiJ2()">-1 Ponto</button>
+            <button type="button" onclick="ZeraJ2()">Zera</button>
+        </div>
+
+        
+
+    </div>
+    <script src="Placar.js"></script>
+</body>
+</html>

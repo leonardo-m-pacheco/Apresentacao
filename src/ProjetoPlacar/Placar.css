@@ -1,0 +1,11 @@
+*{box-sizing: border-box;}
+
+#container{
+    display: flex;
+   text-align: center;
+   margin-left: 30%;
+}
+
+img{
+    width: 50px;
+}
