@@ -38,7 +38,7 @@
         Calcular = () => {
             let weight = Number(peso.value)
             let height = Number(altura.value)
-            let result = (weight/ height ** 2).toFixed(3)
+            let result = (weight/ height ** 2).toFixed(2)
 
             if (result < 18.00) {
                 resultado.innerHTML = `${result} <br> Magreza`;
@@ -49,7 +49,7 @@
              if(result > 25.00 || result < 29.99){
                 resultado.innerHTML = `${result} <br> Sobrepeso`;
             }
-             if(result > 30.00|| result < 39.9){
+             if(result > 30.00|| result < 39.99){
                 resultado.innerHTML =`${result} <br> Obesidade`;
             }
             if(result > 40.00 ){
