@@ -5,20 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Conversor de velocidade</title>
+    <script src="../../jQueryApi.js"></script>
+   
 </head>
 <body>
     
     <div id="container">
 
         <div>
-            <input type="number" placeholder="KM/h">
+          Digite o valor em KM/h  <input type="text" id="kmp" autofocus onchange="Convertekm()" placeholder="KM/h"> 
+          <p id='saida'>0</p>
+          
+      
         </div>
        
         <div>
-            <input type="number" placeholder="Mp/h">
+          Digite o valor em Mp/h  <input type="number" id="mph" onchange="Convertemp()" placeholder="Mp/h">
         </div>
+        <p id='saidamph'>0</p>
+       
 
 
     </div>
+    
+    
+         <script src="index.js"> </script>
 </body>
 </html>
