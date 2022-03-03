@@ -32,6 +32,31 @@
     </div>
     </div>
 
+    <div>
+        <form>
+            <label>
+                <input type="text" id="fnovo" placeholder="Adicione algo"><button type="button" id="btnAdd">Adicionar</button>
+            </label>
+        </form>
+        <ul id="listaElementos">
+
+        </ul>
+    </div>
+    <script>
+      inicia = () => {
+        document.getElementById("btnAdd").addEventListener('click',function(){
+            var lista = document.getElementById('listaElementos')
+            var texto = document.getElementById('fnovo')
+            var li = document.createElement("li")
+            li.textContent = texto.value;
+            lista.appendChild(li)
+            texto.value = ''
+            texto.focus();
+        })
+      }
+      window.addEventListener('load',inicia);
+    </script>
+
     <script>
 
 
@@ -40,7 +65,7 @@
             var saida = $('p')
             var element = document.createElement('div')
             vendaMediaMensal.focusout(function () {
-                $(saida).append(vendaMediaMensal.val())
+                $(saida).append(document.createTextNode(vendaMediaMensal.val()))
             });
         })
 
