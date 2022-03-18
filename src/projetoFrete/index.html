@@ -67,6 +67,7 @@
        .PicNav{
            flex: 1;
            
+           
        }
        
 
@@ -75,7 +76,7 @@
             position: fixed;
              bottom: 0;
             right: 0;
-            width: -moz-fit-content;
+            width: auto;
             border: 3px solid rgb(22, 9, 9);
             
             
@@ -89,7 +90,21 @@
             transition: 2s;
         }
 
- 
+     
+        .Slides{
+            animation: myAnim 2s ease 0s 1 normal forwards;
+            
+        }
+       
+        @keyframes myAnim {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
         
     </style>
 </head>
@@ -99,8 +114,10 @@
 
     <nav id="navbar">
         <div class="PicNav">
-            <h1>Fretes e Mudanças</h1>
-            <img class='Slides' src="../Public/img_servicos2.png" alt="photo4">
+            <h1 class='Slides'>Fretes e Mudanças</h1>
+            <h1 class='Slides'>Para todos os lugares</h1>
+            <img  src="../Public/img_servicos2.png" alt="photo4">
+            
         </div>
  
     </nav>
