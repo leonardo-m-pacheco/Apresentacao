@@ -17,7 +17,11 @@
 
         #navbar {
             background-color: aqua;
+            background-image:linear-gradient(to right, aqua, rgb(0, 114, 114));
             padding: 5%;
+            display: flex;
+            align-items: center;
+            
 
         }
 
@@ -30,7 +34,7 @@
         }
 
         @media screen and (max-width: 361px) {
-            #ContainerMain {
+            #ContainerMain,#navbar{
                 display: block;
                 padding: 1%;
             }
@@ -57,27 +61,35 @@
             flex: 2;
         }
 
-        .Slides {
-            width: 300px;
+       img{
+           width: 300px;
+       }
+       .PicNav{
+           flex: 1;
+           
+       }
+       
+
+       
+        .LMP{
+            position: fixed;
+             bottom: 0;
+            right: 0;
+            width: -moz-fit-content;
+            border: 3px solid rgb(22, 9, 9);
+            
+            
+        }
+        a{
+            text-decoration: none;
+            color:black;
+        }
+        li:hover{
+            background-color: rgb(196, 44, 44);
+            transition: 2s;
         }
 
-        .SiteName {
-            text-align: center;
-        }
-
-      .PicNav{
-        animation: myAnim 2000ms ease 0s infinite normal forwards;
-
-}
-@keyframes myAnim {
-  0% {
-    transform: translateX(0);
-  }
-
-  100% {
-    transform: translateX(100px);
-  }
-}
+ 
         
     </style>
 </head>
@@ -86,26 +98,24 @@
 
 
     <nav id="navbar">
-        <div class="SiteName">
-            <h1>Fretes e mudanças</h1>
-        </div>
         <div class="PicNav">
-            <img class='Slides' src="https://bravatransportesemudancas.com.br/wp-content/uploads/2021/06/Qual-e-a-diferenca-entre-frete-e-mudanca-01.jpg" alt="photo2">
-            <img class='Slides' src="https://riofreterapido.com.br/wp-content/uploads/2019/11/Frete-Transportes.jpg" alt="photo3">
+            <h1>Fretes e Mudanças</h1>
+            <img class='Slides' src="../Public/img_servicos2.png" alt="photo4">
         </div>
+ 
     </nav>
     
     <div id="options">
 
         <ul>
             <li>
-                <p>Home</p>
+            <a href="Home"><p>Home</p></a>
             </li>
             <li>
-                <p>Nossos serviços</p>
+                <a href="Servicos"><p>Nossos serviços</p></a>
             </li>
             <li>
-                <p>Sobre nos</p>
+                <a href="Sobre"><p>Sobre nos</p></a>
             </li>
         </ul>
 
@@ -158,7 +168,7 @@
 
                 </p>
             </span>
-            <img src="https://gfretetransporte.com.br/wp-content/uploads/2018/09/fretes-transportes-palhoca-1.jpg"
+            <img src="../Public/img_servicos1.png"
                 alt="photo">
 
         </div>
@@ -190,6 +200,7 @@
 
     <footer id="footer">
         <p>&#169; All rights reserved </p>
+        <div class="LMP">LMP Soluções</div>
     </footer>
     
   <script>w3.slideshow(".Slides", 2000)</script>
