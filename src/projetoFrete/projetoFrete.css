@@ -26,7 +26,7 @@ body {
     border: 5px solid transparent;
 }
 
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 412px) {
 
     #ContainerMain,
     #navbar {
@@ -38,16 +38,18 @@ body {
 
     .Logo1 {
         text-align: center;
-   
+        
     }
 
     .imgLogo1 {
         display: none;
+        
+        
     }
   
 }
 
-@media screen and (max-width: 844px) {
+@media screen and (max-width: 914px) {
     #ContainerMain {
         display: block;
         text-align: center;
