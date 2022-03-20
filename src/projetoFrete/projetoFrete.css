@@ -11,6 +11,7 @@ body {
     background-image: linear-gradient(to right, aqua, rgb(0, 114, 114));
     padding: 1%;
     display:flex;
+    width: 100%;
 
 
 }
