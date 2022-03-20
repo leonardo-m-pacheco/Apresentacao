@@ -17,11 +17,10 @@
 
         #navbar {
             background-color: aqua;
-            background-image:linear-gradient(to right, aqua, rgb(0, 114, 114));
+            background-image: linear-gradient(to right, aqua, rgb(0, 114, 114));
             padding: 1%;
-            display: flex;
-            align-items: center;
-            
+            display:flex;
+
 
         }
 
@@ -29,14 +28,37 @@
             display: flex;
             margin-top: 5%;
             padding: 1%;
-            justify-content: space-around;
-
-
         }
 
-        @media screen and (max-width: 361px) {
-            #ContainerMain,#navbar{
+        .paragraph{
+            border: 5px solid transparent;
+        }
+
+        @media screen and (max-width: 360px) {
+
+            #ContainerMain,
+            #navbar {
                 display: block;
+                padding: 1%;
+
+            }
+           
+
+            .Logo1 {
+                text-align: center;
+           
+            }
+
+            .imgLogo1 {
+                display: none;
+            }
+          
+        }
+
+        @media screen and (max-width: 740px) {
+            #ContainerMain {
+                display: block;
+                text-align: center;
                 padding: 1%;
             }
         }
@@ -49,95 +71,125 @@
 
         #options {
             background-color: #D3D3D3;
-            text-align: center;
-
-        }
-
-        ul {
             display: flex;
-            list-style: none;
         }
 
-        li {
-            flex: 2;
+     
+
+
+        img {
+            width: 300px;
+            
+            
         }
 
-       img{
-           width: 300px;
-       }
-       .PicNav{
-           flex: 1;
-           
-           
-       }
-       
 
-       
-        .LMP{
+
+        .LMP {
             position: fixed;
-             bottom: 0;
+            bottom: 0;
             right: 0;
             width: auto;
             border: 1px solid rgb(22, 9, 9);
-            
-            
+
+
         }
-        a{
+
+        a {
             text-decoration: none;
-            color:black;
+            color: black;
+            flex: 2;
+            text-align: center;
+            font-family: Georgia, 'Times New Roman', Times, serif;
         }
-        li:hover{
+
+        a:hover {
             background-color: rgb(196, 44, 44);
             transition: 2s;
         }
 
-     
-        .Slides{
-            animation: myAnim 2s ease 0s 1 normal forwards;
+
+        .Slides {
+            animation: slides 2s ease 0s 1 normal forwards;
+            color: rgb(6, 6, 59);
+
+        }
+
+        @keyframes slides {
+            0% {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .Logo2 {
+            text-align: center;
+            font-size: xx-large;
+            font-family: Verdana;
+            font-weight: 300px;
+            flex:1;
+            color: rgb(6, 6, 59);
+            
             
         }
-       
-        @keyframes myAnim {
-  0% {
-    opacity: 0;
-    transform: translateX(-50px);
-  }
-
+        .textoLogo2{
+            animation: Logo2 7s ease 0s infinite normal forwards;
+        }
+        @keyframes Logo2 {
+  0%,
+  50%,
   100% {
     opacity: 1;
-    transform: translateX(0);
+  }
+
+  25%,
+  75% {
+    opacity: 0;
   }
 }
-        
+        .Logo1{
+            display: block;
+        }
     </style>
 </head>
 <script src="https://www.w3schools.com/lib/w3.js"></script>
+
 <body>
 
 
     <nav id="navbar">
-        <div class="PicNav">
-            <h1 class='Slides'>Fretes e Mudanças</h1>
-            <h1 class='Slides'>Para todos os lugares</h1>
-            <img  src="../Public/img_servicos2.png" alt="photo4">
-            
-        </div>
- 
+        
+            <div class="Logo1">
+                <h1 class='Slides'>Fretes e Mudanças</h1>
+                <h1 class='Slides'>Para todos os lugares</h1>
+                <img class="imgLogo1" src="../Public/img_servicos2.png" alt="photo4">
+            </div>
+            <div class="Logo2">
+                <h1 class="textoLogo2">Sua marca aqui!</h1>
+                
+            </div>
+       
+
     </nav>
-    
+
     <div id="options">
 
-        <ul>
-            <li>
-            <a href="Home"><p>Home</p></a>
-            </li>
-            <li>
-                <a href="Servicos"><p>Nossos serviços</p></a>
-            </li>
-            <li>
-                <a href="Sobre"><p>Sobre nos</p></a>
-            </li>
-        </ul>
+        <a href="Home">
+            <p>Home</p>
+        </a>
+
+        <a href="Servicos">
+            <p>Nossos serviços</p>
+        </a>
+
+        <a href="Sobre">
+            <p>Sobre nos</p>
+        </a>
 
     </div>
 
@@ -147,7 +199,7 @@
             <img src="https://gfretetransporte.com.br/wp-content/uploads/2018/09/fretes-transportes-palhoca-1.jpg"
                 alt="photo">
             <span>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam a neque enim. Donec feugiat ipsum et
+                <p class="paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam a neque enim. Donec feugiat ipsum et
                     ultrices sodales. Fusce interdum felis vel augue eleifend cursus. Quisque ultricies fermentum dui,
                     nec tempus diam mollis et. Nam commodo nulla vitae dui tristique, sed luctus massa ornare. In hac
                     habitasse platea dictumst. Morbi mattis a sem et scelerisque. Vivamus ullamcorper tellus in elit
@@ -170,7 +222,7 @@
         <div>
 
             <span>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam a neque enim. Donec feugiat ipsum et
+                <p class="paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam a neque enim. Donec feugiat ipsum et
                     ultrices sodales. Fusce interdum felis vel augue eleifend cursus. Quisque ultricies fermentum dui,
                     nec tempus diam mollis et. Nam commodo nulla vitae dui tristique, sed luctus massa ornare. In hac
                     habitasse platea dictumst. Morbi mattis a sem et scelerisque. Vivamus ullamcorper tellus in elit
@@ -188,15 +240,14 @@
 
                 </p>
             </span>
-            <img src="../Public/img_servicos1.png"
-                alt="photo">
+            <img src="../Public/img_servicos1.png" alt="photo">
 
         </div>
         <div>
             <img src="https://gfretetransporte.com.br/wp-content/uploads/2018/09/fretes-transportes-palhoca-1.jpg"
                 alt="photo">
             <span>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam a neque enim. Donec feugiat ipsum et
+                <p class="paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam a neque enim. Donec feugiat ipsum et
                     ultrices sodales. Fusce interdum felis vel augue eleifend cursus. Quisque ultricies fermentum dui,
                     nec tempus diam mollis et. Nam commodo nulla vitae dui tristique, sed luctus massa ornare. In hac
                     habitasse platea dictumst. Morbi mattis a sem et scelerisque. Vivamus ullamcorper tellus in elit
@@ -219,12 +270,12 @@
     </div>
 
     <footer id="footer">
-        <p>&#169; All rights reserved </p>
+        <p><b>&#169; All rights reserved</b></p>
         <div class="LMP">LMP Soluções</div>
     </footer>
-    
-  <script>w3.slideshow(".Slides", 2000)</script>
-    
+
+    <script>w3.slideshow(".Slides", 2000)</script>
+
 </body>
 
 </html>
