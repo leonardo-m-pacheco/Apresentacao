@@ -43,7 +43,7 @@ body {
 
     .imgLogo1 {
         display: none;
-        
+        width: 100px;
         
     }
   
@@ -68,12 +68,15 @@ body {
     display: flex;
 }
 
-
+.imgLogo1 {
+ 
+    width: 300px;
+    
+}
 
 
 img {
     width: 300px;
-    
     
 }
 
