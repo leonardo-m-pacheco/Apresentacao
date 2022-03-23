@@ -23,14 +23,16 @@ body{
 
 }
 
-@media screen and (min-width: 740px) {
+@media screen and (min-width: 900px) {
 
     #ContainerMain{
          display:flex;
          padding: 1%;
-         text-align: center;
+        text-align: center;
+        
  
      }
+     
  
  }
 
