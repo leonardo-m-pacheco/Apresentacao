@@ -14,25 +14,26 @@ body{
 }
 @media screen and (max-width: 412px) {
 
-    #ContainerMain,#navbar{
-        display: inline-block;
+   #ContainerMain{
+        display:block;
         padding: 1%;
         text-align: center;
 
     }
 
 }
-@media screen and (max-width: 914px) {
-    #ContainerMain,.paragraph{
-        display: block;
-        text-align: center;
-        padding: 1%;
-    }
-    .w3-sidebar,.w3-teal{
-        display: block;
-        padding: 1%;
-    }
-}
+
+@media screen and (min-width: 740px) {
+
+    #ContainerMain{
+         display:flex;
+         padding: 1%;
+         text-align: center;
+ 
+     }
+ 
+ }
+
 
 .Logo2 {
     text-align: center;
@@ -77,16 +78,13 @@ opacity: 0;
       transform: translateX(0);
     }
   }
-#ContainerMain {
-    display: flex;
-    margin-top: 5%;
-    padding: 1%;
-    width: 100%;
-    
-}
+
+
+
 
 .paragraph{
     border: 5px solid transparent;
+    
 }
 img{
     width: 300px;
