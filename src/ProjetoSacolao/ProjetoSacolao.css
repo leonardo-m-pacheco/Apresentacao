@@ -6,7 +6,7 @@ body{
 }
 
 #navbar {
-    background-color: aqua;
+    
     background-image: url('https://lorensonline.com.br/wp-content/uploads/2019/06/Lorens-Crescimento-do-Hortifruti-no-Brasil-legumes-sortidos-2.jpg');
     padding: 1%;
     display:flex;
@@ -83,7 +83,7 @@ opacity: 0;
     
 }
 img{
-    width: 200px;
+    width: 300px;
 }
 
 
