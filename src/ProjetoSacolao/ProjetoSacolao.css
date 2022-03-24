@@ -59,37 +59,28 @@ opacity: 0;
     }
   }
 
-.nature{
-    animation: nature 5s ease 0s 1 normal forwards;
-   margin-left: 10%;
+.nature img{
+    animation: nature 1s ease 0s 1 normal forwards;
+   
    
 }
 @keyframes nature {
     0% {
-      transform: scale(1) translateY(0);
-      transform-origin: 50% 16%;
+      opacity: 0;
     }
   
     100% {
-      transform: scale(1.25) translateY(-15px);
-      transform-origin: top;
+      opacity: 1;
     }
   }
   
 
 
-.paragraph{
-    border: 5px solid transparent;
-    
-}
+
 img{
-    width: 300px;
+    width: 320px;
 }
-@media screen and (max-width:500px) {
-    img{
-        width: 200px;
-    }
-}
+
 
 
 .LMP {
