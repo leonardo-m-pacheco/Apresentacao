@@ -59,20 +59,12 @@ opacity: 0;
     }
   }
 
-.nature img{
-    animation: nature 1s ease 0s 1 normal forwards;
+.nature{
    
+   margin-top: 2px;
    
 }
-@keyframes nature {
-    0% {
-      opacity: 0;
-    }
-  
-    100% {
-      opacity: 1;
-    }
-  }
+
   
 
 
