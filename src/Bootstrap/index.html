@@ -1,21 +1,96 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-   <style>
-       body{
-           margin: 0px;
-       }
-   </style>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  
+  <link rel="stylesheet" href="./Bootstrap.css">
+  <script src="../jQueryApi.js"></script>
+  <script src="./Bootstrap.js"></script>
+  <style>
+    body {
+      margin: 0px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    #Navbar {
+      background-color: antiquewhite;
+      padding: 2%;
+      text-align: center;
+    }
+
+    #footer {
+      background-color: antiquewhite;
+      padding: 2%;
+      text-align: center;
+    }
+    #col-a{
+      background-color: azure;
+      
+    }
+    #col-b{
+      background-color: blueviolet;
+    }
+    #col-c{
+      background-color: red;
+    }
+   #linha{
+     margin-bottom: 5%;
+     padding: 1%;
+     border: 5px solid transparent;
+   }
+   #carrosel{
+     padding: 5%;
+   }
+   img{
+     width: 100%;
+   }
+  </style>
+
 </head>
+
 <body>
-    <div class="container">
+  <nav id="Navbar">
+
+    <h1>NAVBAR</h1>
+
+  </nav>
+  <div class="container-fluid">
+
+    <div id="linha" class="row">
+      <div id="col-a" class="col-sm-2 text-center"> <p>.col-sm-4 .col-sm-4 .col-sm-4 .col-sm-4
+        .col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4
+        .col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4
+        .col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4
+        .col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4
+        .col-sm-4.col-sm-4.col-sm-4.col-sm-4
+        .col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4
+      </p>
+      </div>
+     
+      <div id="col-c" class="col-sm-10">.col-sm-4
+        .col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4
+        .col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4
+        .col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4
+        .col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4
+        .col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4
+
+      </div>
+      <div class="col-sm-10">.col-sm-4
+        .col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4
+        .col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4
+        .col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4
+        .col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4
+        .col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4
+
+      </div>
+      <div id="carrosel" class="col-sm-10">
         <h2>Carousel Example</h2>
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
           <!-- Indicators -->
@@ -29,26 +104,26 @@
           <div class="carousel-inner">
       
             <div class="item active">
-              <img src="https://www.multibeneficiosgpa.com.br/wp-content/uploads/2020/05/1588193759_2474Maio051132x566pxV1b.jpg" alt="Los Angeles" style="width:100%">
+              <img src="https://www.multibeneficiosgpa.com.br/wp-content/uploads/2020/05/1588193759_2474Maio051132x566pxV1b.jpg" alt="Los Angeles">
               <div class="carousel-caption">
-                <h3>Los Angeles</h3>
-                <p>LA is always so much fun!</p>
+                <h3>Jacarépaguá</h3>
+                <p>Frutas frescas todos os dias!</p>
               </div>
             </div>
       
             <div class="item">
-              <img src="https://asserj.com.br/wp-content/uploads/2021/10/Hortifruti-Nova-Igua%C3%A7u-nova-op%C3%A7%C3%A3o-para-os-moradores-1170x750.jpg" alt="Chicago" style="width:100%">
+              <img src="https://asserj.com.br/wp-content/uploads/2021/10/Hortifruti-Nova-Igua%C3%A7u-nova-op%C3%A7%C3%A3o-para-os-moradores-1170x750.jpg" alt="Chicago">
               <div class="carousel-caption">
-                <h3>Chicago</h3>
-                <p>Thank you, Chicago!</p>
+                <h3>Lagoa</h3>
+                <p>legumes e verduras sem agrotóxicos</p>
               </div>
             </div>
           
             <div class="item">
-              <img src="https://i0.wp.com/chacarastrapasson.com.br/wp-content/uploads/2020/02/hortifruti.jpg?fit=658%2C350&ssl=1.jpg" alt="New York" style="width:100%">
+              <img src="https://i0.wp.com/chacarastrapasson.com.br/wp-content/uploads/2020/02/hortifruti.jpg?fit=658%2C350&ssl=1.jpg" alt="New York">
               <div class="carousel-caption">
-                <h3>New York</h3>
-                <p>We love the Big Apple!</p>
+                <h3>Copacabana</h3>
+                <p>Nossos preços são imbatíveis</p>
               </div>
             </div>
         
@@ -64,8 +139,17 @@
             <span class="sr-only">Next</span>
           </a>
         </div>
+    </div>
+
+
+   </div>
       </div>
-      <footer><h1>Eu sou o footer</h1></footer>
-      
+    </div>
+  
+  <footer id="footer">
+    <h1>Eu sou o footer</h1>
+  </footer>
+
 </body>
+
 </html>
