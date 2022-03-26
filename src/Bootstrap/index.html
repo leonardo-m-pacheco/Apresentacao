@@ -6,149 +6,129 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  
+
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+
   <style>
-    body {
-      margin: 0px;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
     #Navbar {
-      background-color: antiquewhite;
-      padding: 2%;
-      text-align: center;
+      background-color: purple;
+      padding: 1%;
     }
 
     #footer {
       background-color: antiquewhite;
       padding: 2%;
       text-align: center;
+      margin: 0;
     }
-    #col-a{
-      background-color: azure;
-      
+
+    #carrosel {
+      padding: 5%;
     }
-    #col-b{
+
+    img {
+      width: 300px;
+    }
+
+    #tron {
+      background-color: tomato;
+    }
+
+    #container1 {
       background-color: blueviolet;
     }
-    #col-c{
-      background-color: red;
+    #w3card{
+      width: fit-content;
     }
-   #linha{
-     margin-bottom: 5%;
-     padding: 1%;
-     border: 5px solid transparent;
-   }
-   #carrosel{
-     padding: 5%;
-   }
-   img{
-     width: 100%;
-   }
-  </style>
 
+    
+  </style>
+  <script src='W3.js'></script>
 </head>
 
 <body>
+
   <nav id="Navbar">
-
-    <h1>NAVBAR</h1>
-
+    <h1>Header</h1>
   </nav>
-  <div class="container-fluid">
 
-    <div id="linha" class="row">
-      <div id="col-a" class="col-sm-2 text-center"> <p>.col-sm-4 .col-sm-4 .col-sm-4 .col-sm-4
-        .col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4
-        .col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4
-        .col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4
-        .col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4
-        .col-sm-4.col-sm-4.col-sm-4.col-sm-4
-        .col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4
-      </p>
-      </div>
-     
-      <div id="col-c" class="col-sm-10">.col-sm-4
-        .col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4
-        .col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4
-        .col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4
-        .col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4
-        .col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4
-
-      </div>
-      <div class="col-sm-10">.col-sm-4
-        .col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4
-        .col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4
-        .col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4
-        .col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4
-        .col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4
-
-      </div>
-      <div id="carrosel" class="col-sm-10">
-        <h2>Carousel Example</h2>
-        <div id="myCarousel" class="carousel slide" data-ride="carousel">
-          <!-- Indicators -->
-          <ol class="carousel-indicators">
-            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#myCarousel" data-slide-to="1"></li>
-            <li data-target="#myCarousel" data-slide-to="2"></li>
-          </ol>
-      
-          <!-- Wrapper for slides -->
-          <div class="carousel-inner">
-      
-            <div class="item active">
-              <img src="https://www.multibeneficiosgpa.com.br/wp-content/uploads/2020/05/1588193759_2474Maio051132x566pxV1b.jpg" alt="Los Angeles">
-              <div class="carousel-caption">
-                <h3>Jacarépaguá</h3>
-                <p>Frutas frescas todos os dias!</p>
-              </div>
-            </div>
-      
-            <div class="item">
-              <img src="https://asserj.com.br/wp-content/uploads/2021/10/Hortifruti-Nova-Igua%C3%A7u-nova-op%C3%A7%C3%A3o-para-os-moradores-1170x750.jpg" alt="Chicago">
-              <div class="carousel-caption">
-                <h3>Lagoa</h3>
-                <p>legumes e verduras sem agrotóxicos</p>
-              </div>
-            </div>
-          
-            <div class="item">
-              <img src="https://i0.wp.com/chacarastrapasson.com.br/wp-content/uploads/2020/02/hortifruti.jpg?fit=658%2C350&ssl=1.jpg" alt="New York">
-              <div class="carousel-caption">
-                <h3>Copacabana</h3>
-                <p>Nossos preços são imbatíveis</p>
-              </div>
-            </div>
+  <div class="container-fluid border-3 text-center">
+    <div class="row">
+      <div class="col-sm-4">
         
-          </div>
-      
-          <!-- Left and right controls -->
-          <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-            <span class="glyphicon glyphicon-chevron-left"></span>
-            <span class="sr-only">Previous</span>
+          <a href="/w3images/lights.jpg">
+            <img src="https://www.formula1.com/content/dam/fom-website/manual/Misc/2022manual/WinterFebruary/GettyImages-1372295177.jpg" alt="Lights" >
+            <div class="caption">
+              <label>Preço:<p>R$ 1800,00</p></label>
+            </div>
           </a>
-          <a class="right carousel-control" href="#myCarousel" data-slide="next">
-            <span class="glyphicon glyphicon-chevron-right"></span>
-            <span class="sr-only">Next</span>
+        
+      </div>
+      <div class="col-sm-4 text-center">
+       <div class="well">
+          <a href="/w3images/nature.jpg">
+            <img src="https://www.formula1.com/content/dam/fom-website/manual/Misc/2022manual/WinterMarch/BahrainGP/GettyImages-1384157919.jpg" alt="Nature" >
+            
+            <div class="caption">
+            
+              <label>Preço:<p>R$ 1800,00</p></label>
+            </div>
           </a>
         </div>
-    </div>
-
-
-   </div>
+      </div>
+      <div class="col-sm-4">
+        
+          <a href="/w3images/fjords.jpg">
+            <img src="https://s3-eu-west-1.amazonaws.com/racingnews-v2-prod/2022/Sainz/_1125x633_crop_center-center_85_none/FL424WRXsAAv-ja.jpg?v=1646228579" alt="Fjords" >
+            <div class="caption">
+              <label>Preço:<p>R$ 1800,00</p></label>
+            </div>
+          </a>
+        
       </div>
     </div>
   
+   <div class="row">
+     <div class="col-sm-12">
+      <div class="w3-container">
+        <h2>Photo Card</h2>
+      
+        <div id="w3card" class="w3-card-4">
+          <img src="https://s3-eu-west-1.amazonaws.com/racingnews-v2-prod/2022/Sainz/_1125x633_crop_center-center_85_none/FL424WRXsAAv-ja.jpg?v=1646228579" alt="Alps">
+          <div class="w3-container w3-center">
+            <p>The Italian / Austrian Alps</p>
+          </div>
+        </div>
+      </div>
+     </div>
+   </div>
+    
+
+
+
+    <div class="jumbotron">
+      <div class="container">
+        <h1>Hello, world!</h1>
+        <p>Contents ...</p>
+        <p>
+          <a href="https://www.google.com.br" class="btn btn-primary btn-lg">Learn more</a>
+        </p>
+      </div>
+    </div>
+
+  </div>
+
   <footer id="footer">
     <h1>Eu sou o footer</h1>
   </footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <script> w3.slideshow(".nature", 3000) </script>
+
 
 </body>
 
