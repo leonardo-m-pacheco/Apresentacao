@@ -19,8 +19,10 @@
     }
 
     #Navbar {
-      background-color: #f10f0f;
-      padding: 1%;
+      background-image: url('https://garagem360.com.br/wp-content/uploads/2022/01/2023-Honda-HR-V-Teaser-1-2.jpg');
+      padding: 8%;
+      background-size: cover;
+      background-position:5%;
     }
 
     #footer {
@@ -37,12 +39,19 @@
     img {
       width: 300px;
     }
-
     .w3-sidebar,
     .w3-bar-block,
     .w3-card,
     .w3-animate-left {
       display: none;
+    }
+    #barrabusca{
+      color: black;
+      float: right;
+    }
+    .frontphoto{
+      width: auto;
+
     }
   </style>
   <script src='W3.js'></script>
@@ -53,37 +62,38 @@
 
   <!--Nav bar-->
   <nav id="Navbar">
-    <h1>Header</h1>
+   
   </nav>
 
 
   <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" id="mySidebar">
-    <button class="w3-bar-item w3-button w3-large" onclick="w3_close()">Close &times;</button>
-    <a href="#" class="w3-bar-item w3-button">Link 1</a>
-    <a href="#" class="w3-bar-item w3-button">Link 2</a>
-    <a href="#" class="w3-bar-item w3-button">Link 3</a>
+    <button class="w3-bar-item w3-button w3-large" onclick="w3_close()">Fechar &times;</button>
+    <a href="#" class="w3-bar-item w3-button">Documentos</a>
+    <a href="#" class="w3-bar-item w3-button">Onde estamos</a>
+    <a href="#" class="w3-bar-item w3-button">Galeria</a>
   </div>
 
   <div id="main">
 
     <div class="w3-teal">
-      <button id="openNav" class="w3-button w3-teal w3-xlarge" onclick="w3_open()">&#9776;</button>
+      <button id="openNav" class="w3-button w3-teal w3-xlarge" onclick="w3_open()">&#9776; Menu</button>
       <div class="w3-container-fluid">
 
         <div class="w3-bar w3-black">
-          <a href="#" class="w3-bar-item w3-button">Home</a>
+          <a href="" class="w3-bar-item w3-button">Home</a>
           <a href="#" class="w3-bar-item w3-button">Semi-novos</a>
           <a href="#" class="w3-bar-item w3-button">4 portas</a>
           <a href="#" class="w3-bar-item w3-button">Hatch</a>
+          <div>
+            <input id="barrabusca" oninput="w3.filterHTML('.container-fluid' , 'div', this.value)" placeholder="Digite a marca..">
+          </div>
         </div>
 
       </div>
     </div>
 
 
-<div>
-  <input oninput="w3.filterHTML('.container-fluid' , 'div', this.value)" placeholder="Search for names..">
-</div>
+
 
 
     <!--corpo-->
@@ -92,7 +102,7 @@
       <div class="row-padding">
 
         <div class="col-sm-4 text-center">
-          <img src="https://cdn.revendamais.com.br/FC/4641/2872610_6_B_a5d4a3978a.jpg" alt="photo">
+          <a href="Ford2portas.html"><img src="https://cdn.revendamais.com.br/FC/4641/2872610_6_B_a5d4a3978a.jpg" alt="photo"></a>
           <div id="ford">
             <div w3-repeat="Ford">
               <div>{{Nome}}</div>
@@ -139,13 +149,15 @@
 
     </div>
   </div>
+  
 
   <div class="jumbotron">
     <div class="container">
-      <h1>Hello, world!</h1>
+      
+      <h1>TRT veículos!</h1>
       <p>Contents ...</p>
       <p>
-        <a class="btn btn-primary btn-lg">Learn more</a>
+        <a class="btn btn-primary btn-lg">Saber Mais...</a>
       </p>
     </div>
   </div>
@@ -218,6 +230,7 @@
   <div class="demo">
     <p id="demo"></p>
   </div>
+  
   <footer id="footer">
     <h1>Eu sou o footer</h1>
   </footer>
