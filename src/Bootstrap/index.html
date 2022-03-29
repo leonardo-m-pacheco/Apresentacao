@@ -5,20 +5,26 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Auto Market</title>
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <script src="../ProjetoApi/arquivo.js"></script>
 
+  <script src="https://www.w3schools.com/lib/w3.js"></script>
 
   <style>
+    body {
+      background-color: whitesmoke;
+    }
+
     #Navbar {
-      background-color: purple;
+      background-color: #f10f0f;
       padding: 1%;
     }
 
     #footer {
-      background-color: antiquewhite;
+      background-color: #f10f0f;
       padding: 2%;
       text-align: center;
       margin: 0;
@@ -32,25 +38,15 @@
       width: 300px;
     }
 
-    #tron {
-      background-color: tomato;
+    .w3-sidebar,
+    .w3-bar-block,
+    .w3-card,
+    .w3-animate-left {
+      display: none;
     }
-
-    #container1 {
-      background-color: blueviolet;
-    }
-
-    #w3card {
-      width: min-content;
-    }
-    .img1{
-      width: 200px;
-    }
-   
-   
   </style>
   <script src='W3.js'></script>
-  
+
 </head>
 
 <body>
@@ -61,63 +57,89 @@
   </nav>
 
 
-  <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id="mySidebar">
-    <button class="w3-bar-item w3-button w3-large"
-    onclick="w3_close()">Close &times;</button>
+  <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" id="mySidebar">
+    <button class="w3-bar-item w3-button w3-large" onclick="w3_close()">Close &times;</button>
     <a href="#" class="w3-bar-item w3-button">Link 1</a>
     <a href="#" class="w3-bar-item w3-button">Link 2</a>
     <a href="#" class="w3-bar-item w3-button">Link 3</a>
   </div>
-  
+
   <div id="main">
+
+    <div class="w3-teal">
+      <button id="openNav" class="w3-button w3-teal w3-xlarge" onclick="w3_open()">&#9776;</button>
+      <div class="w3-container-fluid">
+
+        <div class="w3-bar w3-black">
+          <a href="#" class="w3-bar-item w3-button">Home</a>
+          <a href="#" class="w3-bar-item w3-button">Semi-novos</a>
+          <a href="#" class="w3-bar-item w3-button">4 portas</a>
+          <a href="#" class="w3-bar-item w3-button">Hatch</a>
+        </div>
+
+      </div>
+    </div>
+
+
+<div>
+  <input oninput="w3.filterHTML('.container-fluid' , 'div', this.value)" placeholder="Search for names..">
+</div>
+
+
+    <!--corpo-->
+
+    <div class="container-fluid text-center">
+      <div class="row-padding">
+
+        <div class="col-sm-4 text-center">
+          <img src="https://cdn.revendamais.com.br/FC/4641/2872610_6_B_a5d4a3978a.jpg" alt="photo">
+          <div id="ford">
+            <div w3-repeat="Ford">
+              <div>{{Nome}}</div>
+              <div>Modelo: {{Modelo}}</div>
+              <div>Km: {{KM}}</div>
+              <div>Valor: {{Preco}}</div>
+
+
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-4 text-center">
+          <img src="https://motortudo.com/wp-content/uploads/2021/07/fusca-86-1600-carros-populares-antigos-32a.jpg"
+            alt="photo">
+            <div id="wolksvagenfusca">
+              <div w3-repeat="Wolksvagenfusca">
+                <div>{{Nome}}</div>
+                <div>Modelo: {{Modelo}}</div>
+                <div>Km: {{KM}}</div>
+                <div>Valor: {{Preco}}</div>
   
-  <div class="w3-teal">
-    <button id="openNav" class="w3-button w3-teal w3-xlarge" onclick="w3_open()">&#9776;</button>
-    <div class="w3-container-fluid">
-      
-      <div class="w3-bar w3-black">
-        <a href="#" class="w3-bar-item w3-button">Home</a>
-        <a href="#" class="w3-bar-item w3-button">Semi-novos</a>
-        <a href="#" class="w3-bar-item w3-button">4 portas</a>
-        <a href="#" class="w3-bar-item w3-button">Hatch</a>
+  
+              </div>
+            </div>
+        </div>
+        <div class="col-sm-4 text-center">
+          <img src="https://motortudo.com/wp-content/uploads/2019/07/Volkswagen-Gol-S-1986-Motor-Tudo-2.jpg"
+            alt="photo">
+
+          <div id="wolksvagengol">
+            <div w3-repeat="Wolksvagengol">
+              <div>{{Nome}}</div>
+              <div>Modelo: {{Modelo}}</div>
+              <div>Km: {{KM}}</div>
+              <div>Valor: {{Preco}}</div>
+
+
+            </div>
+
+          </div>
+        </div>
       </div>
 
     </div>
   </div>
 
-
-
-  
-
-  <!--corpo-->
-
-  <div class="container-fluid text-center">
-    <div class="row-padding">
-
-      <div class="col-sm-4 text-center">
-        <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHCBYWFRgWFhYZGRgaHBwcHBwcHB8cHBwaGhwcHBwcIxwcIS4lIR4rIRoYJjgmKy8xNTU1GiQ7QDs0Py40NTEBDAwMEA8QHxISHzQrJCs0NDQ0NDQ0NzQ0NDQ2NDQ0NjQ0NDQ9NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NP/AABEIAK4BIgMBIgACEQEDEQH/xAAbAAABBQEBAAAAAAAAAAAAAAAFAQIDBAYAB//EAEYQAAIBAgMEBgcFBQcDBQEAAAECEQAhAxIxBAVBUQYiYXGBkRMyobHB0fBCUmKS4RQVcoKyByNDU6LC8UTS4hYzNGOTJP/EABkBAAMBAQEAAAAAAAAAAAAAAAABAgMEBf/EACYRAAICAgICAgMAAwEAAAAAAAABAhESIQMxQVETYQRxoSKR8BT/2gAMAwEAAhEDEQA/AMXsal8REUCWhYMxoJJ7ONEk3WpljidXMFkIwUwSDHPv7KHbu2sYWKMTLmiYExqImYPAmrC7wXKqFHKrOUZxbNqPU7T50UWFMLdalMqvIOIFBCMSTEx3gGoRukZcR1dWGGAYKssyWAg9pBFS7PvgBQVwwArMcvpLziWzXTh2U4Y39wwCZc5SSXzSEPVFlUASai67GCGUIc8H1RbmQBN6kLBXdgOC6RxF798VJibK0B+E3Ez2eVhzpMPDhy0wp1WLjhpF7TpS0VsLbLg/3pCmIJv4E0R2lXOSDEISdOa9nbQ7Znb0pI14xf1lM6DkaM7YgHoypmVIIAJhZW9h2Dz7KuPTM5doQj+/U/gHn1qKYLUOCztAsYyAmNftz7IosmEmYBSdOI0PhqK0g9v9mU11+iRKlWrOzbtZ5g9XgSCJ8Ka+yOpgrPG17c6vJEUyMGlp2HhM2gJp67K5mFNqLQURqK0mGgUADQChWzbuaQWsNY40XrOTsuKorbw9Q9499eSbz/8Ak4v8bV65t/qHvHvryzE2RsXbnw0jMztE6WBPwrN9v9GsSuiQ31Yk1JpUu37G+FiZHjNlFxcG1iPEU5djd5KIzAFVJAkZiBaanf8ACtEd4inPhmA4ixAJ4wdPCQKvruklguYBjGVSIzsQZVSbEAAmdLVKnR7aXRyimBIFwMxUzAnUWjxpW2GgbiMbR30rscwEfRqztG7usoVg/VFwNCWywZFjNQ4uBDtOoyj2nnSbGkiviCXChJzGDAknTzAjTvpuw7FtGI6jBXLlJw2MwLIxUkcxm8DFE9z7Ix2zCeDZ+VoKMSZ5+yiW48LLt+0AmDnZgvDKy3Nu5PZUyjFsDE7XurGTFw0aHIAfLOhWQ3L7QYT2ipOkyF9pZMo62RUOkOQBdvu5SbDjFbfE2NHxHOKcoyYozyQVPpSQQSdZA19lZDfOw59pxXYyqQSoucqhS5jkQYns41CbW314G6S0ZTHwXkggErK24wcsyNRbWjfSLDnFyi2REUeAX9as7kcPteLiqAiop9GkAAyQirAtOWT3iqm9MXNjvrJJA7YI+VaqT8+iHRPgvPo8NSeshJPFSrFxB/kHnWVxNT30f2sNhNhMLFkzDsnOunKIPjQDE1PfWkKoK8iUopKUVYGl3avUXuHuonhCh27h1F/hHuolh0NEssZhyFdS5a6kSYMG9Pnhp76RMSrGFtZURCnvVT7SKlv0jVV5ZEvnRLZn6hBi40EaC96Ho4nzqVCsCcvuNKUvouMb8hFnb0YHCbEai/f7aiMKZcmTcEfZHGI4zVQ4vAERr401sSbk3qUynH7DuzKC+s6T5W4QYo1tl/RlWBIE2DROknkLXGtxWQ2baipBBAiwt4VeTe7zcqf5RTUkluyficnqjRbLif8A9cgkHImmon0kntrWFUV1LwwKRbvEHy+NeZ4G82XE9JALQADpAE8Fjn7K0GzdI0PBye7tvHlVxlFtuzLk42q0bvdSf3Z5GbdkX+NRbJtAU5gbRBB1N+Ed1C16SouGryuUgAWPuqp++8EAAuRFiMrW43t2mrTT8mbTXg0G17UA/wDdmD9ojQnu+NGBWR2Xeuz4jKiPLRJJVhxniOQrTfvHC++PI/KplKPscYy8os11Vht+H98e35Vw3hhffWpzj7KxZ23jqHw99eT7ZtLYe24joxVldiCO73V6htu3YZQgOs9/LWvOdv3Q74+JiKUyZyRLQdB2dtS5K+/BUYskxd94mKCuK4IVbdSSxJBiRpaSD2dtXt1b+w8JFCB2LtmeSAFIkSvfI1+75C8bdzoQGVoOpFxJgAEjh6x7oFU8bAyMFhsxJYCLEAQ19Ld9TnEbQb3rv4YqIWzriI3rWCqGBDQFuATl8J51S27eeMyKnpXCBSoym4tAuI5mq207DjCMmC7GSZOUZfGSSTeocTGgorgZnkFYJEGRrAPCk5IOgnu/eeJh4K4QK9VrmJllZIJPEQo/Mam2veBbGQsFz5QBaxCzqOJ4zQzbGGG3XBGfTq3mIuOVlqDeO2oHCsIymNL2gySO330pTr7E5KJqth3m+NtaYTomXKTIDAquQi3CJUDxN+FXNmaN6P1Yz4NtfwXuOU+VY/Yt7ZH9MgXOHsDJN5FwtvVtFWth3xG0HGdhnW7RbNKwYF7RbQiofKu6JzRpdsYZ8QZA6xiE5hmQZWUmZi5NxE8ddRkdo29mdyIWQb21428h4Gre98QkgLITggsACRJN4JNzy4ChYEEkCDcSTMcvrsrlnNSZe2Vd34cban2FJZgFtIALAHyv3VX/AGiHYshYFy+YmLEQLcYN/GrvpCkm0wxNryZXWdYJ86FbXthK5b2UKBysAT7K6+NqcaYmi5tWK2OUREMxCswCkhbdogX0rPY4hmHb3eyi+9T/AHWFB1DTfmRPgaDE1vCOKA6lFJSirA1G7fUT+FfcKJ4QvQzdvqL/AAj3UWwRVEsnt9Guqb0ddUUyTzkIYmkBp6IMhPb9e6oVptFD2mn4Sgnrd/f2VHXFuFJoCVkGuvx7a5sObgamB9fWlMBqwhzWmABfiTcWHfUu0BDHClyE6foB31Ji4YUgDWBMXjXjz07KfhtwkETN5gHnGk9pmlfoEyBJkSTRLYcSG740qtiYaAWYFuyI99ORl7OF6O1ZaYefFTKgjQxEAWtB7Tc03FILAA6gnWxAk/ChyOOft5UUXFQrduXHQcfrvqP0V+whuJoxg06oxFhxHIRWmTDBB+8DB7JM/Osn0exy2IkxfNNu0mLcxa9bB2GgI429/vNYy+zQajgaHS+hvwoJg7yf0uTKeMSpEG1+RmDH8NHdlKyRzHuOvtoDt2+0V2zQwmIVcxI5SSBrynSiMHJUkS5KL2EnwyYmRA4x2SfYKYcORmJIEjzgfCKENv8AAEDCnlnefCw+NQDpE8QFw1HLKW/qY1rH8PlZEvyIBvbulGBgkJiBwcq/YMGwmDN6BfvXZXR0cOxLuylULRJJBBFK2/sUj11EckT2dW1VcTpPtM9XGIHYB8q6I/jSrZl8yfSDmw79w1QIE2h4ET6Fz8Kr4mH6R8R2wsUTkZCUPVhbyGgDkRUW5ukeI8o74ru3qwQFUczFzf4Aa1e33vEohDMQR6xX1ixuEU8wNW+g/wDz77F8v0Cukz5wrICGWD1o4dxPM+QoNjYuCzFs7B+EAxfWRljxtVc72ebIPz4k+Yanrvl+Kv4Yh/3g1L/HXscpOXgiUKWVSQoLnrt6xMSZIFgSR507anRA32+sQdSGgtDBoiLAW5VN+9w3rqxi/WTDeO2YU1Lgbdhs0kKeN0dbiSLByJ186l8DEW0QhAbyEHGYJ62g5aVGrdb1T5aknnf2c6l/bcN5vE/jgf60X30r4SuJQsRFo63tQsNb35VxP8blXa/0a5xKBUTAU6kEiW0uePaKGbehtOsacr6dv1yosQERQCXaTMG94m06W486pHDYj1LnQkjwvFzrVQuErf8AQdPoGsxAyERBNo4mPlUOJhFYnj8KmcHje5pXGYCbRPw1rrTJToq0oNWRso+97P1qZN3FvVkxrCzVtDUg1u31E/hHuotgCg2zq6KAENgBJU8Ku7OcZiRmVIE3Q+VzVOSJoNefsrqC5sf/ADf9ArqztfYsfsxwcxFNp0VyrPGqKGTSxSslLlNAHCpWbyqMGly0hEgxDGvjqfbUmQ5ZF+7UVWWpQ1rHWpaGM9HPOmnDq7hIjAAkz5+SyJ86gxkAMBg3aJHgQQCDRl4KjshKUoSnMacvCht0WkrGIh5nzohsO78RxmLsicXJN41CiesfIDiRV7Yd2BAHxh1j6uHx/ni4/hF+ZGhs7TiSQGubZUEQoGkxaByEAVcYtvZE5RSpdjkx8iZMPNlPEsSzkcST8IA5Co0SLnXs4VImUXYjN2n2Dspwyk2g9xn3V1Qio9nNK5dFPEvxNKrG8QBzqXGTrERaoMZTYDTsq3InAg2nGgZVPjSbHsb4jZVjSZYwB3mptn2B8RrL1FgM0hQPFjEm9a3c272Q4geUw0u1wTA1OYdxUdzcqTlQ/pEW5dgGz4edozvOWdBHrP8AwqPMn+EjI763j6R4WciyFnU3ux7Sb1oN+becRzhr1SQJX7uGPUS2hMye+gT7lcm0Vnkk6ZcY3sGLTwh5Gl2jAKOVJBI1irmzbUuXK4JA0iJjh4j4071aGyrho06dlSpsrgEjgfiI+FS4e1KA4y2Nxe6kaVfw3DYbE9vunSpk2kFg7Z0LGxAFvbcfLwqcbJfUTqDF++eFQ7K8PHOR59Ye3NVxpzCBelbE7TLmzbcpOTHAbgHInwb5+fOm7fuvIMyElfugSYixmbr3VXYDiJ4VLsW3HCIR5OHw+8ndzHZ5dsThHkVMFJp6AOKQsRroYNge/ie2ovRE2PGdTHfetJvnc2cekwjcgGAeq45ryPZoazLu2jDmP0NZYuOi7vaLWz4LvOVQSBMXkjiRbhVrZcbFwyHVRBtY2PNTK61BseZTmDlSPViLHxGlaHdW6U2gFjisHHrDqjxgLWjsAlsu8UcSuG55nIIk8NaRcbaD/wBPh/nb/sq9u/c7YVlxCRyMRPOw1qXF2HEJJ9OV7AEgeazWbAo+kf8Ayk8/0rqhLjmx7YW/bpXV5vz8nv8AhdI86JtSKa4aUgFeqBOOf1akao1aKm2bZ3c5URnPJVLe4VIqITXMfr68K0Wx9DNrfVAg5uwHsEt7KObL/Z6NcTHPci/7mPwosDBKKkUdteo7N0J2RNUdz+Nz7lgUU2fcmzJ6mz4ffkDHzMmjYrR44gJMKCTyAJPkKuYO5tpf1cDFPaUYe0ivZ0wSBCpA5AR7qd6B/ut5UqKUqPJMPojtjf4JH8TIP901oNm6HYmGAUKZ4HXZvUP4FCm/4jflGp3D4DgElWgamLCqGJtqj7VXGLZMuQz2D0RxZzPtAnmoLeF4q3h9EkzEviFgReECGecz8KuYm8uR99VX2udTWqhL2ZOaHp0Z2ZdS573UfCuO4Nl4gk88/wAhVc7SKX0nf5U/j+w+Rkrbm2aCAXH85P8AUKjw9z7Mogu79pF/9JA9lRtjjtpp2ledNRryS5WSNsuEgIwy+otmKg37Dymm7128LhZMNTCqWMj1nHqCAT1RbyWovTrzqHFxFPHs+XtiqxrYkzOftjIFZ/WIvNjPE+NIN9ubAT2D5Ci+UHWI7agxNiGqx3VChfZq5oAOrM5YownmCOPbU5C8x50XTEZdb94mruHjK2oAPdWig0ZylZmmVY1HnVjZUORzw5+c/CjzbOh1UHvqM7Ch+wvkKJRbQskZh+qwPj5X9xo/hYCsjOrWETfui0fGpU2PZ2MdWeQI9wqf93ILCYP4m05WNZ4NlOSBjAc6ayg+2iTbtTgSPGffTf3cBoxPfB+FGDJyRT2DbjhWMlCbj7pPEfL46z723WuMM6EZonscfPt+gjbrm2ePCas7DsjYcrnDLqBEZT56Hl9Ecb00UpeTJrhoCQ1iLEEGQR4UR3M2CHGdM6GzdScvb6po7vDdiYgzBkDjvAYcAZHtrtybO+C5LLhurCCM3HgbpE1ElSLUkzS7Bh4RRSjEJeI6vHkQOM1R3hgbNnYuM2JEglJMxbrZY5caIpiIQCcG54BJ9sXqrvTFORwuFltZiIP9NvOubkdRb+il2ZjOv4vy11LmP3h5iuryjavsxI0NcK4aGkAr2yDcdDNwYeInpXwmxDJgMwVABYdUXY99tK1O997tsqoqYCENMBSwCx2Ih+hT+j6DD2dEmLVnul+JnxQAAwUATCt26lxzqYO1YTVNr0PxOmW0fZwcNe8O3vK1WbpVtZkg4axqQiW/M5oGVUahR4YI95NXf3wVTIjYaiCCc6A3EEwoKzHZWi+yH9Ez9KNqP/Ux/CMIf0oTUD772pv+pxfAv/sQVQba14uv/wCr/wC1BT0ZbMSSk3MYrCOMEkDSlY6Xo9I6L7AxwA+Li4jO4z9bEcQG9UQWsYE6caLJsGETcuf53I/qoJsXSfZskBxM2kxCxAEG40q3/wCptnymHSSDGhvwqW0JJ2Bd9YXo0fEwsyy5AOZja5Myb2jWh2xbeMRZ0YWYdvAjsNO3nv7Nh5VR5BaerYggD4UC3PiQ2JmkShuRHWzKV8ZFc/ByTU9p0d3Pxcb4u1aNCWqTZ8FnYKokmqaYq/eHmK1+4cPDw8FsYsrc4IMcltxrvcmeZiiFN2phLmeCeZ08KDbw3/gIYLLPKRPlrWZ6WdKnxnKI2VBIke4Hl28ayZqXKilCzf8A7/wXMZl8498Uj4yzY15/V7YN4MhAN04jl2imp+xvjNiWqDEYiTw4dkU3CxJWfsnQ0zFex7jTsVEzGmFqaHppNOxUOZqZmNdNITRkGJKuORxqQY9VYpVozFiQPu0F8+dpmY+E0U2bHfKA5Ba9x7PZVSaUNQpUNxvsIDGNJ6Y1U9JVnYMDO0cNSeynkycUSKSdBNc2IVsRTt574wsDqzfkKFDpJhv1TIniRQ5gothFtoAqM4gNVHHHgacnbx1qXIpRNX0exXbDIUA5WImed/iakxd3bS05sRCpPq5OHKc3tqt0ZV3TEVXyr1RpcE5jIPOI9lEX3U5/6jE8655/5WmaVRmG3bczlnjddePGuo7+4X+9766vJ+Lk9M2uPs8hHGrm7cJJLOJAiBEieZEi1Xn3enIgWvf4UxtmUEwdeF9fGvSXNEysvDeWURhyt5gZgPLOR7KpjbGcA4h9ITJ64BCxyGnjFEtzbg9MrH0mTKYjLJvzuI/Spdp6JOhUo4aTBhT1QeJnh41rFxatId35ByYaET6MQJkhUF7c+Fx50roAOqkC5PqTEWiOF6IY+4dpRGIOGyLJs1yJ1ylOMAxNqEs+IbFbRBuumsWHOr0I7B2liCDGpGgHHsFQenHpCzyYiJNtO2mYWw4zuFUAZmAEkQCbXNHE6G7Rq7YdgYyElieAuoHPWlYFI73Pb+Y1w3p2n85rR7D0MVlDYmIykzKgAxe3WmKvp0L2c2z4nmPlRYtGI2/eWdAvb94keVCjidg9vzre7R0JhyEcMsSM8zw1i3Ghe07gCGHQd40ouytGVOJ2D2/OiWDtRwtnfLZsUxb7qzf2n81Ehu3D+4KDb5frhAICAADvv8vKn0LsHgU5TV/d+7me+i362t9IA7KJ/uMHKAzE6aDrE+6kosHJIDthKeEdtVHwyDBo1tO73QDOoVoJKggyoMFhFhzidOVUNpSR7qRRf3Tis2GVBgqRHG3L30QGI4BssR2/rQncjRm8KKs4j64002S0hyO4ABCk89PZlNL6Rvur+Yf9lNDilzinkwpC+kP3B+b/AMK7P+Afm/8AEUmalz0ZMVI7P+D21zOfun/SfewrppQ1GTCkIXP3W8lH++uOIBHVefDzp2akm88vj/xRkwxQudfxflf4JUx3ouFhOyzJgCQR4XANRZqA742jM4QaLr/EdfLTzoUmLFFDFdnYsxknWoylXti2Qv3f8VJtexZBI4a/pN6K8l2uiXYN4lcMg3KkRPI/XtqX96zqo8/0qhu/CDMykwCvxBq+u7E4sfZ8qWVBQX3DvhM/o3JVXYdYMRDRlEwotpx7a2I2XB4bR5Yn/lQXdPQvByo7uxYrJRspUTzETpzqztu4dhw1JdMPuyAz4CobXYmFf2PC/wA4/n/8q6vN/wB2j/6x2BBA9ldWfzQCmFMTAT7s6X6w09+lOOxo0BgIAI+0dZtNXyh+4fI+VRth81PdeuPOX/IotbixsPBLsYObLYZjoTeDYa0RPSzDXXAxD3Kp9zUD9H+Fvb31zYZkwreOY1pHnlHVfwloOP022dfXwcRe9FHvNMPTnY/uN+VfnWY3rsjMhlTbWx0PfflWQxUKmK64SyjY6PVG6d7MLjDc+Cf91MH9oWFwwXPivzryua6asKR6yf7ScJbHAbxZagxf7TMPhs3iWX5GvLZolurdpxQxJZQICkKSCePlbzqZSUVbCkbof2l4YMnZmmCLMOMcwOVCdv6ao5JGCw/mHyoMejbn1XnsKMPnVHF3PjLPULRxUhvdelHki+mFBR+koP8Ahf6h8qC4uIXdmi7GY9wqEoRqCO8R76VAJvobVoBr9mAVQoEACKu7s6z/AMNz7gKF7JjhkBgjsPZajewQqTxa57uH121Tlozx2M3mJgwpIYetHqsQGgm2lZHbMLKWUaK7KO5WIHsFanHdCw9IrejWXdhovo4YDQyS2UZe2sttblrkdZ2LED7zEkgeJio8mi6E2Fwi95mrDbQLVB+4tr/yMTypuJufalHWwcQDtBpNoZa9N3U70x7PM/KghxmH0aT9ob6n50AHfTHs8z8qUY/d5n5UC/aW+p+dEdi3dtGKudE6pmCWAmDBtM0pSUdsC6Mbu8/0rv2ju8/0rl6MbabjCBHMOkf10p6MbYNUUfzr86egO/aaUbQOdSJ0T2s/cW3F/Z1Qb0VwehUoM+OQ/wBrKsp3CYPj7KQrM9tO3BQY14d9BhWg330XfBRnz51W8FcpiY4Eg8+FZ0GmpJ9DNBusAIO0mrJw89udvOhu68eAVJ7R7ZJPLTyogNpChnn1QYj7xEKPbWqeqM2t2Dt0bFjOGbCwy+gJEW48SK0e7NwO0elZkYk9UR1YmJMmSY07ad0JcJguSG678CNFAE37c3lRg7UqmVDTbUg34cK4eTmptWbRx8i/ufLc4mK/Zm/SnpurDb1s5IAJlzImY49lRPvFiCJIkXggfCqisuvWzaXv9frXO+WXseUfCCX7qw/x+ZrqpelP4/MV1T8jFkvRyemgKUbTiLnnxvXLhY4HqG2lhYVe2lycfCX+NuegA/3Vb+uXsrvxIyBmFi4uUKUuPwyaUZ/8s/lq3t6HIWW7L1h/L+k+dSo6socaEZgeERNLAMijju5BTJY2IycOPCsbvno/iCWRHK3NgSR4DhW+xMJXWdQbgj2EVHgYQbMp9ZIBMxI4N2TfyNNJodo8hcQYOtMr2DH3YjkFgCw0NifbY1Ux904IH95hJl+9kHHmALH6tVZfQaPPt3bmxMUg5SicWIi34QdfdW83ftTYKLh4YhFFhY87nmSaixOimzN/hx2qWHvqs3Q/AUdYPHFg3tIpS2CaDQ3yxjTtuKE7z2bPiLiBspJhjoNLeNVz0KwWEpiP/pYe6oH6CgaYpPcgn+q/1apxT7DRZ3julWTOMZWdAYWDJBItJ48fPnWU2rCBJIGuvYaPHoIT6uN5pf8Aq+FMboftK2D4bDS5IPuq40lSADbE4Q5iCTBAMzrpKmxjWjCb29TM7mPWARRnvYSTCiLWquOjm0zGRQeWcDynXwpx6NbXHqL+dfnVWgK+0bYcmSAqBi+UGSz/AHnY3YxYcB7atdF9mR8cYmI6qmGZAYjrOLrbkLEnnHbFV+je1E3RR3ut+69O/wDR+08UT86/OjQHpH7ywv8ANw/zUrbxwiL4mGR/H+lebp0SxjYhAe1viBFW16D4sTmw/M/Kpr7FSKPSndqI7YmE6OjNcKwJVjc24qZ1FZ6tlh9CnOrqPBvfFTr0I/8AsX8p086pUlQzKbq3a2O4RSFH2nayqPieQr0bZtlREVBjYYVQANfb2mhS9CsMAl8RvBB8zVvD6I7KouGYxOsGO5flWfJBS7FYV2d8nq46do5/Kry7YnF0PiY84rPr0V2YaoYj7xP6mpU6M7Kf8IE97D2E0Rioqkx6DeJjIBJZR4n5U1GFiGA/m/ShidGtlH+AviCfjNObo/so/wABPKKrfsWi5tBDKVZkKsCpBJuDaNOVeWb43Y2zuUJzL9lxoR/3DiK9J/cOzR/8dL8l+Ipy7k2YWGBh+KrPtBmkm0GjyhMSNDFTelZyATPfoO21eqLufAB6uBhD+RflUg3bggf+zh/kX3wKvJho8/2bb3RQiskAR6pPjVrZ9/ukwEZz9opIA7AbeytyNhwx/hYf5BTzgppkEdy1nhC7oVmQ2bpKbB0ynmFEeUTRnZ94sYZGVl5ZV+VjRdcFY9RfID4Vy4C8FX8q0OC8DUgd+0nl7K6in7Mv3E/KK6pwY8kB87HagJsMI8NCXERJngdOVEhP1+lCdjfPtWLEnKiLMRBktFh40SOKBqDrwB+vKtSTmkzcjy49nKqe48ecFR1yAMuYidPGZq6uIIJmNImhu63AfFwwLK2ZQLyGgkyTzzUAFAI04mYHM0N21cmImJJAJyORYQZK87zbxoiW/De44eFNxcMMuVkBB4W+gZoAeWBtr2WvXOAwjhEEW5XqpuzFYoUeQ+H1SJuY0NuYirpm/GgCrsWMRKOTmTQkk5l+y1+MRPbVsuOevf21U2zDbquiZnFhcKIOoPMWFT7Ji5wSCLWIuII1F762oAo7QhwnDgnKzQwEtcxfLEQIJPnRLPMEQfKPYaWJsYqquGcISiErN1A6yzqQdT3eVADsbBLRD5SNCBcdl9QZFJhbTfIxIe9tZHMQsfRqbCfMAVykai408Kbi4WaJMQbREg6WkfU0DHugYEEWP1y1pkFNZZQIBuWA7eYt31GcRkIDkBODXN+TXt3xFXGQHiY8fnQIizAjWx7QdajfDj1GiPskCD4xI8KRtkicnVJ8Qe+W9tObEAgMCo5gm8mLkD30AIX4EAGLg3HmBB17aULeBK8RF1I7o+FSOgcXuP4tajTBKRluBwNyO5tfOgBxxSt263Iqp914txmn9Q3kGO2CPK9MTFUkiTPIgA+3Ud1JioLkEg8CBx8InuoAUry63eYjytP1NNVkJmDm0uCDe9jxHjSB2EAw8RJAKnnoSZpUxkxAchDAEgwTE+FADjI+1I5Ea+P/ADTiQRcW58KjQZRYkT9ky3vvTxjXAKHsI04i8i360AOW8MrmPMH4+2kOIRqJ5ZTr4GuIUgx7DHfoKY7keoAxt9qONACoAQYzA8iT/STEXpeBuT3dWosXKbOABIsZIk6XBiaflP2W5WIzCPG9ACiADJKTrefaaVg2Wxnv+Y/WkbGK+sDHMAmO0jLSPhhgDPkQPhr30ASvbUN4SR7K5XJ4z2R8qjxWYDqx42t36UmI6QM1r6keEyPfQA4sc0ZW75EUpMAgsDOkgacuR76U4ehUmOyDPiacQ0erPl7jQBFlbkn5z8q6n5fwf0/OuoAD7ox8+JjS0w+XL9kGOY46+2ibOIvprc8hJ91COj6RhsxJ6zMWiPfHPuoq2La1AMcpn/n20Lyj9qkzD4cmbiQT2xx0q6MVTJg/XjQzbDO1YGWxIa5vYQaAQYxOwieFhzjn9TSJcETflBv4E0uISDB48v1pCRrx58dec9lAFNycPEDhpDkI4sOJAa2lzHiKKuT2j49lDt4YBZGggQARrIIM6g6dlSbJtIxMJWggEAxN9edAFkO1rHzB8KH7eWQ+lUHk4MRlkdaBxHu7qtKwHD2/GkzBhJFiNPD6tQBJg4gImRPZ3cq53jS3u176o7rMSmoB6si+W2UHtuZ1q6id1/8AnnQBXxScM51yhQeuAYkRcgEazVtMQMJWYNwbadl7604Jpp5c6pFThYiieo0hVURBEk+B7KTGi4AReSZ5xqdPrtqs0oeorMCbiAVE6kaacu2rAEmb27SPdTUNhIB7+PhoNOFMRMjAixU9wjzEzStyMcKG4zhA2Isz9oHRoETHA6eVWsJvSYcniOFjccwZHgaAGlGQHKSwn1TaB+Ej3U/C2kNER3GzA91SYQ8bDWo8TADEGYYXBgeR5ipAXaMMOsMoIM2vTIdPUgryPrDnBI7taiw8TMQuh0tEWtytU2JhEcYjkB46igZJhYynQkHipEEeFOyjjmE9kHzAmoW2SSJN4sQACLc4qPCchgrkkxIIi4njI17qAHvmQSsv2GZ14EC/j50/CxMwtrxBkHxtUpTtNo7/AHUzFwwYn569poARkm4s0agkd3eOyuR3uWhtPVseWh1qtiYxWJVWWRHAjXvFWVfUR7bdnCgB3pVPEHhrMHupq4S6gnwPVnup2JgzaBMGLkR4gTVbZcUletckkD9fbQBOznQie3rR4/pNc4DEWQmeJvI1i00uQSRe1pn65VH6BC2frTzn4acBQIecw0YeNxr504YwFySOZ1HsvFVdp2nIVkZgxIHAjqk/CrTSBNoPnVAJ1T1hPhaacZFxfsaPeNOFRYiggcDzFvjTWfILljE3m8XqQJf2h/8AL/prqb6Ucq6qA//Z" alt="photo">
-        <p>
-          llksdjflksjlvjsldkjajd fsdjflksajdlgksdalkgjlkjfdgkj sdkjgsdkjgkj dfgkjsdkgfj  sdkfjs ldkgjl skdjflskjd lkfjlskdjflskdjflksjdlfkj
-        </p>
-      </div>
-
-      <div class="col-sm-4 text-center">
-        <img src="https://motortudo.com/wp-content/uploads/2021/07/fusca-86-1600-carros-populares-antigos-32a.jpg" alt="photo">
-        <p>
-          llksdjflksjlvjsldkjajd fsdjflksajdlgksdalkgjlkjfdgkj sdkjgsdkjgkj dfgkjsdkgfj sdkfjs ldkgjl skdjflskjd lkfjlskdjflskdjflksjdlfkj
-        </p>
-      </div>
-      <div class="col-sm-4 text-center">
-        <img src="https://motortudo.com/wp-content/uploads/2019/07/Volkswagen-Gol-S-1986-Motor-Tudo-2.jpg" alt="photo">
-        <p> 
-          ksdhgkj sdfgkaldkgjk ajdkjshkfh skdjfhksajdfkjs ahdfkjshakdjfhksja dhfksjahdfk ahskdjfhkasjdhf kasjhdfks ahdkfjhaskdjhfksdhf
-        </p>
-      </div>
-    </div>
-
-  </div>
-
-  
   <div class="jumbotron">
     <div class="container">
       <h1>Hello, world!</h1>
@@ -127,67 +149,75 @@
       </p>
     </div>
   </div>
-  
+
   <div class="container-fluid">
     <div class="row-padding">
-      
+
       <div class="col-sm-6 text-center">
-        <img src="https://www.formula1.com/content/dam/fom-website/manual/Misc/2022manual/WinterMarch/BahrainGP/GettyImages-1384157919.jpg" alt="Nature" >
-      <p> 
-        Foi bom te ver
-Saber que você
-É feliz
-Impossível te esquecer
-Lembrar você
-Parece um dom
-Foi um lindo amor
-Pena não sobreviver
-Quando a vida
-Me iluminou
-A minha luz
-Era você
-A namoradeira
-No escuro da sala
-Sonhando e beijando
-De segunda a sexta
-No fim de semana
-De noite na Barra
-Procurando vaga
-De noite na Barra
-Agora é cada um
-Cada um
+        <img
+          src="https://www.formula1.com/content/dam/fom-website/manual/Misc/2022manual/WinterMarch/BahrainGP/GettyImages-1384157919.jpg"
+          alt="Nature">
+
+        <p>
+          Foi bom te ver
+          Saber que você
+          É feliz
+          Impossível te esquecer
+          Lembrar você
+          Parece um dom
+          Foi um lindo amor
+          Pena não sobreviver
+          Quando a vida
+          Me iluminou
+          A minha luz
+          Era você
+          A namoradeira
+          No escuro da sala
+          Sonhando e beijando
+          De segunda a sexta
+          No fim de semana
+          De noite na Barra
+          Procurando vaga
+          De noite na Barra
+          Agora é cada um
+          Cada um
         </p>
+
       </div>
       <div class="col-sm-6 text-center">
-        <img src="https://s3-eu-west-1.amazonaws.com/racingnews-v2-prod/2022/Sainz/_1125x633_crop_center-center_85_none/FL424WRXsAAv-ja.jpg?v=1646228579" alt="Fjords" >
-        <p> 
+        <img
+          src="https://s3-eu-west-1.amazonaws.com/racingnews-v2-prod/2022/Sainz/_1125x633_crop_center-center_85_none/FL424WRXsAAv-ja.jpg?v=1646228579"
+          alt="Fjords">
+        <p>
           Foi bom te ver
-Saber que você
-É feliz
-Impossível te esquecer
-Lembrar você
-Parece um dom
-Foi um lindo amor
-Pena não sobreviver
-Quando a vida
-Me iluminou
-A minha luz
-Era você
-A namoradeira
-No escuro da sala
-Sonhando e beijando
-De segunda a sexta
-No fim de semana
-De noite na Barra
-Procurando vaga
-De noite na Barra
-Agora é cada um
-Cada um
+          Saber que você
+          É feliz
+          Impossível te esquecer
+          Lembrar você
+          Parece um dom
+          Foi um lindo amor
+          Pena não sobreviver
+          Quando a vida
+          Me iluminou
+          A minha luz
+          Era você
+          A namoradeira
+          No escuro da sala
+          Sonhando e beijando
+          De segunda a sexta
+          No fim de semana
+          De noite na Barra
+          Procurando vaga
+          De noite na Barra
+          Agora é cada um
+          Cada um
         </p>
       </div>
     </div>
   </div>
-
+  <div class="demo">
+    <p id="demo"></p>
+  </div>
   <footer id="footer">
     <h1>Eu sou o footer</h1>
   </footer>
@@ -195,7 +225,7 @@ Cada um
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
-  
+  <script src="../teste/objetos.js"></script>
   <script>
     function w3_open() {
       document.getElementById("main").style.marginLeft = "25%";
@@ -208,7 +238,7 @@ Cada um
       document.getElementById("mySidebar").style.display = "none";
       document.getElementById("openNav").style.display = "inline-block";
     }
-    </script>
+  </script>
 
 </body>
 

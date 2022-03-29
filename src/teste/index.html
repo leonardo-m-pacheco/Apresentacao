@@ -1,26 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
 </head>
 <script src="https://www.w3schools.com/lib/w3.js"></script>
-<script src="arquivo.js"></script>
+<script src="../ProjetoApi/arquivo.js"></script>
+
+<style>
+  .nomes {
+    background-color: antiquewhite;
+  }
+</style>
 
 <body>
-    <h2>Testing W3.JS in HTML</h2>
 
-    <ul id="id01">
-      <li w3-repeat="customers">{{CustomerName}} - {{City}} - {{Country}}</li>
-    </ul>
-    
-  
 
-<script>
-w3.displayObject("id01", myObject);
-</script>
+  <input oninput="w3.filterHTML('#id01','div', this.value)" placeholder="Search for names..">
+
+
+  <div id="id02">
+    <div w3-repeat="cars">
+      <img src="https://via.placeholder.com/150" alt="ft">
+      <div>{{Fiat}}</div>
+      <div>{{Preco}}</div>
+    </div>
+  </div>
+
+
+ 
+ 
+<script src="./objetos.js"></script>
 </body>
+
 </html>
