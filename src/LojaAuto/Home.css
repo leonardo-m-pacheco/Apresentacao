@@ -40,9 +40,12 @@ body {
       width: 100%;
   }
   #carousel-id{
-      width: 500px;
+      width: 400px;
       
-      
+
   }
-  
+  #row{
+   padding: 1%;
+  }
+ 
 
