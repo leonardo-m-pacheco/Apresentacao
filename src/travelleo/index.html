@@ -6,131 +6,262 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Travelleo</title>
-<link rel="stylesheet" href="../LojaAuto/Bootstrap.css">
-<link rel="stylesheet" href="w3.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../LojaAuto/Bootstrap.css">
+  <link rel="stylesheet" href="w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
 </head>
 
 <style>
-
-
-  #line1{
-   width: 100%;
+  body {
+    box-sizing: border-box;
   }
-  img{
+
+  #line1 {
+    width: 100%;
+  }
+
+  #line2 {
+    margin-bottom: 1%;
+  }
+
+  img {
     max-width: 300px;
+    cursor: zoom-in;
   }
-  #footer{
+
+  #footer {
     margin-top: 10%;
   }
+
+  .jumbotron {
+    background-color: rgb(225, 225, 68);
+  }
+
+  #slidemodal1 {
+    margin-left: 4%;
+  }
+  #slidemodal2 {
+    margin-left: 4%;
+  }
+  .w3-modal-content{
+    max-width: 330px;
+  }
+  
 </style>
-
+<script src="../LojaAuto/W3.js"></script>
 <body>
- 
 
-<div class="page-header">
-  <h1>Travelleo<small>Viaje mais!</small></h1>
+
+  <div class="page-header w3-margin-left">
+    <h1>Travelleo<small>Viaje mais!</small></h1>
+  </div>
   <div class="w3-container-fluid">
- 
+
 
     <div class="w3-bar w3-blue">
       <a href="/src/travelleo/index.html" class="w3-bar-item w3-button">Home</a>
       <a href="#" class="w3-bar-item w3-button">Oferta especial</a>
-      <div class="w3-dropdown-click">
-        <button class="w3-button" onclick="myFunction()">
-          Pacotes <i class="fa fa-caret-down"></i>
-        </button>
-        <div id="demo" class="w3-dropdown-content w3-bar-block w3-card w3-purple">
+      <div class="w3-dropdown-hover">
+        <button class="w3-button">Pacotes</button>
+        <div class="w3-dropdown-content w3-bar-block w3-card-4">
           <a href="#" class="w3-bar-item w3-button">Pacote Nacional</a>
           <a href="#" class="w3-bar-item w3-button">Pacote Internacional</a>
-          <a href="#" class="w3-bar-item w3-button">Hotel Nacional</a>
+          <a href="/src/travelleo/hoteisnac/hoteisnac.html" class="w3-bar-item w3-button">Hotel Nacional</a>
           <a href="#" class="w3-bar-item w3-button">Hotel Internacional</a>
-          
         </div>
       </div>
     </div>
   </div>
-</div>
 
 
 
 
 
-   <div id="firstbox" class="container-fluid bg-info text-center">  
-     <div id="line1" class="row">
-       <div class="col-sm-4 w3-margin-top">
+  <div id="firstbox" class="container-fluid bg-info text-center">
+    <div id="line1" class="row">
+      <div class="col-sm-4 w3-margin-top">
         <div class="card">
-          <img class="card-img-top" src="img/pacote-de-viagem-maceio-feriado-7-de-setembro-2022-8906389128741ecf33e4458f5b339db6.png" alt="Card image cap">
+          <img class="card-img-top"
+            src="img/maceió/pacote-de-viagem-maceio-feriado-7-de-setembro-2022-8906389128741ecf33e4458f5b339db6.png"
+            alt="Card image cap">
           <div class="card-body">
             <h5 class="card-title">Maceió</h5>
             <p class="card-text">Aproveite suas férias com toda a familia.</p>
+
+            <!--btn ver fotos-->
+            <div class="w3-container">
+
+              <button onclick="document.getElementById('id02').style.display='block'" class="w3-button w3-black">Ver
+                fotos</button>
+
+              <div id="id02" class="w3-modal">
+                <div class="w3-modal-content">
+                  <div class="w3-container">
+                    <span onclick="document.getElementById('id02').style.display='none'"
+                      class="w3-button w3-hover-red w3-display-topright">&times;</span>
+
+                      <div class="w3-container">
+                        <h2>Slideshow Indicators</h2>
+                        <p>An example of using buttons to indicate how many slides there are in the slideshow, and which
+                          slide the user is currently viewing.</p>
+                      </div>
+                    <div>
+                      <img class="homeslide1" src="img/Gramado Canela/pacote-de-viagem-gramado-ou-canela-2023-697eb5abffeec282538a8889a395df63.png" alt="slidephoto">
+                      <img class="homeslide1" src="img/Porto seguro/pacote-de-viagem-porto-seguro-feriado-7-de-setembro-2022-03774bddd25ea8fe61f04edd5bb12928.png" alt="slidephoto">
+                      <img class="homeslide1" src="img/Salvador/pacote-de-viagem-salvador-feriado-7-de-setembro-2022-6a13be61439a02604cb04fb24dcc7720.png" alt="slidephoto">
+                    </div>
+                      <p>
+                      <button onclick="home1.previous()">Previous</button>
+                      <button onclick="home1.next()">Next</button>
+                      </p>
+                      
+                     
+
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--btn ver fotos-->
+
             <a href="http://viajar.hu/323ev" class="btn btn-primary">Ver Oferta</a>
           </div>
         </div>
-         
-       </div>
 
-       <div class="col-sm-4 text-center w3-margin-top">
+      </div>
+
+      <div class="col-sm-4 text-center w3-margin-top">
         <div class="card">
-          <img class="card-img-top" src="img/pacote-de-viagem-natal-pipa-2023-c0d5c24f4fdd10218629291d7924092f.png" alt="Card image cap">
+          <img src="img/Natal/pacote-de-viagem-natal-pipa-2023-c0d5c24f4fdd10218629291d7924092f.png" alt="photo">
           <div class="card-body">
             <h5 class="card-title">Natal</h5>
             <p class="card-text">Aproveite a maravilhosa praia da pipa.</p>
+
+            <!--btn ver fotos-->
+            <div class="w3-container">
+
+              <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black">Ver
+                fotos</button>
+
+              <div id="id01" class="w3-modal">
+                <div class="w3-modal-content">
+                  <div class="w3-container">
+                    <span onclick="document.getElementById('id01').style.display='none'"
+                      class="w3-button w3-hover-red w3-display-topright">&times;</span>
+                      <div class="w3-container">
+                        <h2>Slideshow Indicators</h2>
+                        <p>An example of using buttons to indicate how many slides there are in the slideshow, and which
+                          slide the user is currently viewing.</p>
+                      </div>
+                    <div>
+                      <img class="homeslide2" src="img/Gramado Canela/pacote-de-viagem-gramado-ou-canela-2023-697eb5abffeec282538a8889a395df63.png" alt="slidephoto">
+                      <img class="homeslide2" src="img/Porto seguro/pacote-de-viagem-porto-seguro-feriado-7-de-setembro-2022-03774bddd25ea8fe61f04edd5bb12928.png" alt="slidephoto">
+                      <img class="homeslide2" src="img/Salvador/pacote-de-viagem-salvador-feriado-7-de-setembro-2022-6a13be61439a02604cb04fb24dcc7720.png" alt="slidephoto">
+                    </div>
+                      <p>
+                      <button onclick="home2.previous()">Previous</button>
+                      <button onclick="home2.next()">Next</button>
+                      </p>
+
+
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--btn ver fotos-->
+
+
             <a href="http://viajar.hu/32gds" class="btn btn-primary">Ver Oferta</a>
           </div>
         </div>
       </div>
 
-      
-        
-        <div class="col-sm-4 w3-margin-top text-center w3-margin-bottom">
-          <div class="card">
-            <div class="w3-container">
-             
-              <img src="img/pacote-de-viagem-maceio-feriado-7-de-setembro-2022-8906389128741ecf33e4458f5b339db6.png" style="width:300px;cursor:zoom-in"
-              onclick="document.getElementById('modal01').style.display='block'">
-            
-              <div id="modal01" class="w3-modal" onclick="this.style.display='none'">
-                <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
-                <div class="w3-modal-content w3-animate-zoom">
-                  <img src="img/pacote-de-viagem-maceio-feriado-7-de-setembro-2022-bfa19b9aa1fbb57f6b6076da759b18c9.png" style="width:100%">
-                </div>
-              </div>
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">Salvador</h5>
-              <p class="card-text">Encontre tudo que salvador tem para te oferecer.</p>
-              <a href="http://viajar.hu/32gdw" class="btn btn-primary">Ver Oferta</a>
-            </div>
+
+
+      <div class="col-sm-4 w3-margin-top text-center w3-margin-bottom">
+        <div class="card">
+          <img
+            src="img/Salvador/pacote-de-viagem-salvador-feriado-7-de-setembro-2022-6a13be61439a02604cb04fb24dcc7720.png"
+            alt="photo">
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Salvador</h5>
+          <p class="card-text">Encontre tudo que salvador tem para te oferecer.</p>
+          <a href="http://viajar.hu/32gdw" class="btn btn-primary">Ver Oferta</a>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+  </div>
+
+
+
+
+  <div class="jumbotron w3-margin-top">
+    <div class="container ">
+      <h1>ver mais fotos</h1>
+      <p>Todas as fotos</p>
+
+
+      <p>
+        <a class="btn btn-success btn-lg">Learn more</a>
+      </p>
+    </div>
+  </div>
+
+
+  <div class="container-fluid text-center bg-info">
+    <div id="line2" class="row">
+      <div class="col-sm-4 w3-margin-top">
+        <div class="card">
+          <img class="card-img-top"
+            src="img/maceió/viagem+passeio gratis/pacote-de-viagem-maceio-passeio-gratis-2023-05851a48fda6b5c65c8862f7044ea451.png"
+            alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Maceió</h5>
+            <p class="card-text">Passeio + Viagem.</p>
+            <a href="http://viajar.hu/32m96" class="btn btn-primary">Ver Oferta</a>
           </div>
         </div>
+      </div>
 
-     
-     </div>
-   </div>
+      <div class="col-sm-4 w3-margin-top">
+        <div class="card">
+          <img class="card-img-top"
+            src="img/Gramado Canela/pacote-de-viagem-gramado-ou-canela-2023-697eb5abffeec282538a8889a395df63.png"
+            alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Gramado e Canela</h5>
+            <p class="card-text">Aereo + Hospedagem</p>
+            <a href="http://viajar.hu/323m5" class="btn btn-primary">Ver Oferta</a>
+          </div>
+        </div>
+      </div>
 
-
-
-
-<div class="jumbotron">
-  <div class="container">
-    <h1>ver mais fotos</h1>
-    <p>Todas as fotos</p>
-   
-   
-    
-    <p>
-      <a class="btn btn-success btn-lg">Learn more</a>
-    </p>
+      <div class="col-sm-4 w3-margin-top">
+        <div class="card">
+          <img class="card-img-top"
+            src="img/Porto seguro/pacote-de-viagem-porto-seguro-feriado-7-de-setembro-2022-03774bddd25ea8fe61f04edd5bb12928.png"
+            alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Porto Seguro</h5>
+            <p class="card-text">Aéreo + Hospedagem. 5 Diárias</p>
+            <a href="http://viajar.hu/32mak" class="btn btn-primary">Ver Oferta</a>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
 
 
 
-
-
-   
-   <div id="footer" class="contaier-fluid bg-info text-center">
+  <div id="footer" class="contaier-fluid bg-info text-center">
 
     <div class="row">
       <div class="col-sm-4">
@@ -138,50 +269,54 @@
       </div>
 
       <div class="col-sm-4">
-      <h1>Footer</h1>  
+        <h1>Footer</h1>
       </div>
-      
+
       <div class="col-sm-4">
-        
+
       </div>
     </div>
-   </div>
+  </div>
 
-   
-   <script>
-    var myIndex = 0;
-    carousel();
-    
-    function carousel() {
+
+
+  <script>
+    home1 = w3.slideshow(".homeslide1", 5000);
+    home2 = w3.slideshow(".homeslide2", 5000)
+    </script>
+
+
+  <script>
+    var slideIndex = 1;
+    showDivs(slideIndex);
+
+    function plusDivs(n) {
+      showDivs(slideIndex += n);
+    }
+
+    function currentDiv(n) {
+      showDivs(slideIndex = n);
+    }
+
+    function showDivs(n) {
       var i;
       var x = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("demo");
+      if (n > x.length) { slideIndex = 1 }
+      if (n < 1) { slideIndex = x.length }
       for (i = 0; i < x.length; i++) {
-        x[i].style.display = "none";  
+        x[i].style.display = "none";
       }
-      myIndex++;
-      if (myIndex > x.length) {myIndex = 1}    
-      x[myIndex-1].style.display = "block";  
-      setTimeout(carousel, 2500);    
-    }
-    </script>
-   
-   <script>
-    function myFunction() {
-      var x = document.getElementById("demo");
-      if (x.className.indexOf("w3-show") == -1) {
-        x.className += " w3-show";
-      } else { 
-        x.className = x.className.replace(" w3-show", "");
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" w3-white", "");
       }
+      x[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " w3-white";
     }
-    </script>
-  
-  <script src="https://www.clubehu.com.br/assets/ads/js/bloco.js"></script>
+  </script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="https://www.w3schools.com/lib/w3.js"></script>
-  <script src="./hurb.js"></script>
-  <script src="https://www.clubehu.com.br/assets/cmp/js/bloco.js"></script>
-  <script src="../LojaAuto/W3.js"></script>
+   <script src="../LojaAuto/W3.js"></script>
   <script src="../LojaAuto/Bootstrap.js"></script>
 </body>
 
