@@ -27,7 +27,7 @@
 
   img {
     max-width: 300px;
-    cursor: zoom-in;
+    
   }
 
   #footer {
@@ -47,6 +47,16 @@
   .w3-modal-content{
     max-width: 330px;
   }
+  .w3-left{
+    position: absolute;
+    top: 80%;
+    left: 0%;
+  }
+  .w3-right{
+    position: absolute;
+    top: 80%;
+    right: 0%;
+  }
   
 </style>
 <script src="../LojaAuto/W3.js"></script>
@@ -60,15 +70,15 @@
 
 
     <div class="w3-bar w3-blue">
-      <a href="index.html" class="w3-bar-item w3-button">Home</a>
-      <a href="#" class="w3-bar-item w3-button">Oferta especial</a>
+      <a href="index.html" class="w3-bar-item w3-hover-yellow w3-button">Home</a>
+      <a href="#" class="w3-bar-item w3-hover-yellow w3-button">Oferta especial</a>
       <div class="w3-dropdown-hover">
-        <button class="w3-button">Pacotes</button>
+        <button class="w3-button w3-hover-yellow">Pacotes</button>
         <div class="w3-dropdown-content w3-bar-block w3-card-4">
-          <a href="#" class="w3-bar-item w3-button">Pacote Nacional</a>
-          <a href="#" class="w3-bar-item w3-button">Pacote Internacional</a>
-          <a href="/Apresentacao/src/travelleo/hoteisnac/hoteisnac.html" class="w3-bar-item w3-button">Hotel Nacional</a>
-          <a href="#" class="w3-bar-item w3-button">Hotel Internacional</a>
+          <a href="#" class="w3-bar-item w3-hover-yellow w3-button ">Pacote Nacional</a>
+          <a href="#" class="w3-bar-item w3-hover-yellow w3-button">Pacote Internacional</a>
+          <a href="/Apresentacao/src/travelleo/hoteisnac/hoteisnac.html" class="w3-bar-item w3-button w3-hover-yellow">Hotel Nacional</a>
+          <a href="#" class="w3-bar-item w3-hover-yellow w3-button">Hotel Internacional</a>
         </div>
       </div>
     </div>
@@ -113,8 +123,8 @@
                       <img class="homeslide1" src="img/Salvador/pacote-de-viagem-salvador-feriado-7-de-setembro-2022-6a13be61439a02604cb04fb24dcc7720.png" alt="slidephoto">
                     </div>
                       <p>
-                      <button onclick="home1.previous()">Previous</button>
-                      <button onclick="home1.next()">Next</button>
+                      <button class='w3-left w3-xlarge' onclick="home1.previous()">&#8249;</button>
+                      <button class='w3-right w3-xlarge' onclick="home1.next()">&#8250;</button>
                       </p>
                       
                      
@@ -163,8 +173,8 @@
                       <img class="homeslide2" src="img/Salvador/pacote-de-viagem-salvador-feriado-7-de-setembro-2022-6a13be61439a02604cb04fb24dcc7720.png" alt="slidephoto">
                     </div>
                       <p>
-                      <button onclick="home2.previous()">Previous</button>
-                      <button onclick="home2.next()">Next</button>
+                      <button class='w3-left w3-xlarge' onclick="home2.previous()">&#8249;</button>
+                      <button class='w3-right w3-xlarge' onclick="home2.next()">&#8250;</button>
                       </p>
 
 
