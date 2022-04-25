@@ -5,11 +5,14 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Travelleo</title>
+  <title>Travelleo &#x2b;</title>
   <link rel="stylesheet" href="../LojaAuto/Bootstrap.css">
   <link rel="stylesheet" href="w3.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 
 <style>
@@ -17,9 +20,7 @@
     box-sizing: border-box;
   }
 
-  #line1 {
-    width: 100%;
-  }
+
 
   #line2 {
     margin-bottom: 1%;
@@ -27,11 +28,11 @@
 
   img {
     max-width: 300px;
-    
+
   }
 
   #footer {
-    margin-top: 10%;
+    margin-top: 20%;
   }
 
   .jumbotron {
@@ -41,35 +42,51 @@
   #slidemodal1 {
     margin-left: 4%;
   }
+
   #slidemodal2 {
     margin-left: 4%;
   }
-  .w3-modal-content{
+
+  .w3-modal-content {
     max-width: 330px;
   }
-  .w3-left{
+
+  .w3-left {
     position: absolute;
     top: 80%;
     left: 0%;
   }
-  .w3-right{
+
+  .w3-right {
     position: absolute;
     top: 80%;
     right: 0%;
   }
-  
+
+  .title {
+    font-family: segoe script;
+    font-size: xx-large;
+  }
+
+  .parceirohurb {
+    margin-left: 70%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
 </style>
 <script src="../LojaAuto/W3.js"></script>
+
 <body>
 
+  <div class="container-fluid">
 
-  <div class="page-header w3-margin-left">
-    <h1>Travelleo<small>Viaje mais!</small></h1>
+    <h1 class="title">Travel &#x2b;<br> <small>Suas férias começam aqui!</small></h1>
+    <h4 class="parceirohurb">Parceiro Hurb</h4>
+
   </div>
   <div class="w3-container-fluid">
 
 
-    <div class="w3-bar w3-blue">
+    <div class="w3-bar-fluid w3-blue">
       <a href="index.html" class="w3-bar-item w3-hover-yellow w3-button">Home</a>
       <a href="#" class="w3-bar-item w3-hover-yellow w3-button">Oferta especial</a>
       <div class="w3-dropdown-hover">
@@ -77,201 +94,183 @@
         <div class="w3-dropdown-content w3-bar-block w3-card-4">
           <a href="#" class="w3-bar-item w3-hover-yellow w3-button ">Pacote Nacional</a>
           <a href="#" class="w3-bar-item w3-hover-yellow w3-button">Pacote Internacional</a>
-          <a href="/Apresentacao/src/travelleo/hoteisnac/hoteisnac.html" class="w3-bar-item w3-button w3-hover-yellow">Hotel Nacional</a>
+          <a href="/Apresentacao/src/travelleo/hoteisnac/hoteisnac.html"
+            class="w3-bar-item w3-button w3-hover-yellow">Hotel Nacional</a>
           <a href="#" class="w3-bar-item w3-hover-yellow w3-button">Hotel Internacional</a>
         </div>
       </div>
     </div>
   </div>
 
+  <div class="container-fluid text-center">
+    <div class="row">
+      <div class="col-sm-4">
 
-
-
-
-  <div id="firstbox" class="container-fluid bg-info text-center">
-    <div id="line1" class="row">
-      <div class="col-sm-4 w3-margin-top">
-        <div class="card">
-          <img class="card-img-top"
-            src="img/maceió/pacote-de-viagem-maceio-feriado-7-de-setembro-2022-8906389128741ecf33e4458f5b339db6.png"
-            alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Maceió</h5>
-            <p class="card-text">Aproveite suas férias com toda a familia.</p>
-
-            <!--btn ver fotos-->
-            <div class="w3-container">
-              <a  href="http://viajar.hu/323ev" rel="noreferrer noopener" target="_blank" class="btn btn-primary">Ver Oferta</a>
-              <button onclick="document.getElementById('id02').style.display='block'" class="w3-button w3-round w3-yellow">Ver
-                fotos</button>
-                
-
-              <div id="id02" class="w3-modal">
-                <div class="w3-modal-content">
-                  <div class="w3-container">
-                    <span onclick="document.getElementById('id02').style.display='none'"
-                      class="w3-button w3-hover-red w3-display-topright">&times;</span>
-
-                      <div class="w3-container">
-                        <h2>Slideshow Indicators</h2>
-                        <p>An example of using buttons to indicate how many slides there are in the slideshow, and which
-                          slide the user is currently viewing.</p>
-                      </div>
-                    <div>
-                      <img class="homeslide1" src="img/Gramado Canela/pacote-de-viagem-gramado-ou-canela-2023-697eb5abffeec282538a8889a395df63.png" alt="slidephoto">
-                      <img class="homeslide1" src="img/Porto seguro/pacote-de-viagem-porto-seguro-feriado-7-de-setembro-2022-03774bddd25ea8fe61f04edd5bb12928.png" alt="slidephoto">
-                      <img class="homeslide1" src="img/Salvador/pacote-de-viagem-salvador-feriado-7-de-setembro-2022-6a13be61439a02604cb04fb24dcc7720.png" alt="slidephoto">
-                    </div>
-                      <p>
-                      <button class='w3-left w3-xlarge' onclick="home1.previous()">&#8249;</button>
-                      <button class='w3-right w3-xlarge' onclick="home1.next()">&#8250;</button>
-                      </p>
-                      
-                     
-
-
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!--btn ver fotos-->
-
-           
-          </div>
-        </div>
-
-      </div>
-
-      <div class="col-sm-4 text-center w3-margin-top">
-        <div class="card">
-          <img src="img/Natal/pacote-de-viagem-natal-pipa-2023-c0d5c24f4fdd10218629291d7924092f.png" alt="photo">
-          <div class="card-body">
-            <h5 class="card-title">Natal</h5>
-            <p class="card-text">Aproveite a maravilhosa praia da pipa.</p>
-
-            <!--btn ver fotos-->
-            <div class="w3-container w3-center">
-
-                <a href="http://viajar.hu/32gds" rel="noreferrer noopener" target="_blank"  class="btn btn-primary">Ver Oferta</a>
-              <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-normal w3-round w3-yellow">Ver
-                fotos</button>
-
-              <div id="id01" class="w3-modal ">
-                <div class="w3-modal-content">
-                  <div class="w3-container w3-center">
-                    <span onclick="document.getElementById('id01').style.display='none'"
-                      class="w3-button w3-hover-red w3-display-topright">&times;</span>
-                      <div class="w3-container">
-                        <h2>Slideshow Indicators</h2>
-                        <p>An example of using buttons to indicate how many slides there are in the slideshow, and which
-                          slide the user is currently viewing.</p>
-                      </div>
-                    <div>
-                      <img class="homeslide2" src="img/Gramado Canela/pacote-de-viagem-gramado-ou-canela-2023-697eb5abffeec282538a8889a395df63.png" alt="slidephoto">
-                      <img class="homeslide2" src="img/Porto seguro/pacote-de-viagem-porto-seguro-feriado-7-de-setembro-2022-03774bddd25ea8fe61f04edd5bb12928.png" alt="slidephoto">
-                      <img class="homeslide2" src="img/Salvador/pacote-de-viagem-salvador-feriado-7-de-setembro-2022-6a13be61439a02604cb04fb24dcc7720.png" alt="slidephoto">
-                    </div>
-                      <p>
-                      <button class='w3-left w3-xlarge' onclick="home2.previous()">&#8249;</button>
-                      <button class='w3-right w3-xlarge' onclick="home2.next()">&#8250;</button>
-                      </p>
-
-
-
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!--btn ver fotos-->
-
-
-           
-          </div>
-        </div>
-      </div>
-
-
-
-      <div class="col-sm-4 w3-margin-top text-center w3-margin-bottom">
-        <div class="card">
-          <img
-            src="img/Salvador/pacote-de-viagem-salvador-feriado-7-de-setembro-2022-6a13be61439a02604cb04fb24dcc7720.png"
-            alt="photo">
-        </div>
-        <div class="card-body">
-          <h5 class="card-title">Salvador</h5>
-          <p class="card-text">Encontre tudo que salvador tem para te oferecer.</p>
-          <!--começar a colocar o modal daqui-->
-          <a href="http://viajar.hu/32gdw" rel="noreferrer noopener" target="_blank" class="btn btn-primary">Ver Oferta</a>
-        </div>
-      </div>
-    </div>
-
-
-  </div>
-  </div>
-
-
-
-
-  <div class="jumbotron w3-margin-top">
-    <div class="container ">
-      <h1>ver mais fotos</h1>
-      <p>Todas as fotos</p>
-
-
-      <p>
-        <a class="btn btn-success btn-lg">Learn more</a>
-      </p>
-    </div>
-  </div>
-
-
-  <div class="container-fluid text-center bg-info">
-    <div id="line2" class="row">
-      <div class="col-sm-4 w3-margin-top">
-        <div class="card">
-          <img class="card-img-top"
-            src="img/maceió/viagem+passeio gratis/pacote-de-viagem-maceio-passeio-gratis-2023-05851a48fda6b5c65c8862f7044ea451.png"
-            alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Maceió</h5>
-            <p class="card-text">Passeio + Viagem.</p>
-            <a href="http://viajar.hu/32m96" rel="noreferrer noopener" target="_blank" class="btn btn-primary">Ver Oferta</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-sm-4 w3-margin-top">
         <div class="card">
           <img class="card-img-top"
             src="img/Gramado Canela/pacote-de-viagem-gramado-ou-canela-2023-697eb5abffeec282538a8889a395df63.png"
-            alt="Card image cap">
+            alt="photo">
           <div class="card-body">
-            <h5 class="card-title">Gramado e Canela</h5>
-            <p class="card-text">Aereo + Hospedagem</p>
-            <a href="http://viajar.hu/323m5" rel="noreferrer noopener" target="_blank" class="btn btn-primary">Ver Oferta</a>
+            <h5 class="card-title">Pacote Gramado + Canela</h5>
+            <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo
+              do card.</p>
+            <a href="#" class="btn btn-primary">ver oferta</a>
+            <a href="file:///C:/Users/leonardo/OneDrive/Documentos/GitHub/Apresentacao/src/travelleo/verfotos/gramadocanela.html" 
+          target="_blank" noreferer class="btn btn-primary">ver fotos</a>
           </div>
         </div>
       </div>
 
-      <div class="col-sm-4 w3-margin-top">
+      <div class="col-sm-4">
         <div class="card">
           <img class="card-img-top"
-            src="img/Porto seguro/pacote-de-viagem-porto-seguro-feriado-7-de-setembro-2022-03774bddd25ea8fe61f04edd5bb12928.png"
-            alt="Card image cap">
+            src="img/Gramado Canela/pacote-de-viagem-gramado-ou-canela-2023-697eb5abffeec282538a8889a395df63.png"
+            alt="photo">
           <div class="card-body">
-            <h5 class="card-title">Porto Seguro</h5>
-            <p class="card-text">Aéreo + Hospedagem. 5 Diárias</p>
-            <a href="http://viajar.hu/32mak" rel="noreferrer noopener" target="_blank" class="btn btn-primary">Ver Oferta</a>
+            <h5 class="card-title">Pacote Gramado + Canela</h5>
+            <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo
+              do card.</p>
+            <a href="#" class="btn btn-primary">ver oferta</a>
           </div>
         </div>
       </div>
+
+      <div class="col-sm-4">
+        <div class="card">
+          <img class="card-img-top"
+            src="img/Gramado Canela/pacote-de-viagem-gramado-ou-canela-2023-697eb5abffeec282538a8889a395df63.png"
+            alt="photo">
+          <div class="card-body">
+            <h5 class="card-title">Pacote Gramado + Canela</h5>
+            <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo
+              do card.</p>
+            <a href="#" class="btn btn-primary">ver oferta</a>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+  </div>
+
+
+
+  <div class="jumbotron">
+    <div class="container">
+      <h1>Meu nome não é jhonny</h1>
+      <p>teste testando</p>
     </div>
   </div>
 
+  <div class="container-fluid text-center">
+    <div class="row">
+      <div class="col-sm-4">
+
+        <div class="card">
+          <img class="card-img-top"
+            src="img/Gramado Canela/pacote-de-viagem-gramado-ou-canela-2023-697eb5abffeec282538a8889a395df63.png"
+            alt="photo">
+          <div class="card-body">
+            <h5 class="card-title">Pacote Gramado + Canela</h5>
+            <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo
+              do card.</p>
+            <a href="#" class="btn btn-primary">ver oferta</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-4">
+        <div class="card">
+          <img class="card-img-top"
+            src="img/Gramado Canela/pacote-de-viagem-gramado-ou-canela-2023-697eb5abffeec282538a8889a395df63.png"
+            alt="photo">
+          <div class="card-body">
+            <h5 class="card-title">Pacote Gramado + Canela</h5>
+            <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo
+              do card.</p>
+            <a href="#" class="btn btn-primary">ver oferta</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-4">
+        <div class="card">
+          <img class="card-img-top"
+            src="img/Gramado Canela/pacote-de-viagem-gramado-ou-canela-2023-697eb5abffeec282538a8889a395df63.png"
+            alt="photo">
+          <div class="card-body">
+            <h5 class="card-title">Pacote Gramado + Canela</h5>
+            <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo
+              do card.</p>
+            <a href="#" class="btn btn-primary">ver oferta</a>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+  </div>
+
+
+
+  <div class="jumbotron">
+    <div class="container">
+      <h1>Meu nome não é jhonny</h1>
+      <p>teste testando</p>
+    </div>
+  </div>
+
+  <div class="container-fluid text-center">
+    <div class="row">
+      <div class="col-sm-4">
+
+        <div class="card">
+          <img class="card-img-top"
+            src="img/Gramado Canela/pacote-de-viagem-gramado-ou-canela-2023-697eb5abffeec282538a8889a395df63.png"
+            alt="photo">
+          <div class="card-body">
+            <h5 class="card-title">Pacote Gramado + Canela</h5>
+            <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo
+              do card.</p>
+            <a href="#" class="btn btn-primary">ver oferta</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-4">
+        <div class="card">
+          <img class="card-img-top"
+            src="img/Gramado Canela/pacote-de-viagem-gramado-ou-canela-2023-697eb5abffeec282538a8889a395df63.png"
+            alt="photo">
+          <div class="card-body">
+            <h5 class="card-title">Pacote Gramado + Canela</h5>
+            <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo
+              do card.</p>
+            <a href="#" class="btn btn-primary">ver oferta</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-4">
+        <div class="card">
+          <img class="card-img-top"
+            src="img/Gramado Canela/pacote-de-viagem-gramado-ou-canela-2023-697eb5abffeec282538a8889a395df63.png"
+            alt="photo">
+          <div class="card-body">
+            <h5 class="card-title">Pacote Gramado + Canela</h5>
+            <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo
+              do card.</p>
+            <a href="#" class="btn btn-primary">ver oferta</a>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+  </div>
 
 
   <div id="footer" class="contaier-fluid bg-info text-center">
@@ -295,14 +294,18 @@
 
   <script>
     home1 = w3.slideshow(".homeslide1", 5000);
-    home2 = w3.slideshow(".homeslide2", 5000)
-    </script>
+    home2 = w3.slideshow(".homeslide2", 5000);
+    home3 = w3.slideshow(".homeslide3", 5000);
+    home4 = w3.slideshow(".homeslide4", 5000);
+    home5 = w3.slideshow(".homeslide5", 5000);
+    home6 = w3.slideshow(".homeslide6", 5000);
+  </script>
 
 
-  
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-   <script src="../LojaAuto/W3.js"></script>
+  <script src="../LojaAuto/W3.js"></script>
   <script src="../LojaAuto/Bootstrap.js"></script>
 </body>
 
